@@ -31,10 +31,12 @@
   "license": "MIT",
   "scripts": {
     "semantic-release": "semantic-release",
-    "cm": "cz"
+    "cm": "cz",
+    "format": "prettier -c ."
   },
   "devDependencies": {
     "cz-conventional-changelog": "3.3.0",
+    "prettier": "2.5.1",
     "semantic-release": "^19.0.2"
   },
   "config": {

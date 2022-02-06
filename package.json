@@ -35,10 +35,10 @@
     "format": "prettier -c .",
     "prebuild": "rimraf lib",
     "build": "tsc",
-    "test": "jest --passWithNoTests",
+    "test": "jest",
     "test:watch": "jest --watchAll",
-    "test:coverage": "jest --coverage --passWithNoTests",
-    "test:ci": "jest --coverage --ci --passWithNoTests",
+    "test:coverage": "jest --coverage",
+    "test:ci": "jest --coverage --ci",
     "lint": "eslint ./src --ext .ts",
     "prepare": "husky install"
   },

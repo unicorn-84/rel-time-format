@@ -1,8 +1,9 @@
 # 🕰️ rel-time-format
 
-JavaScript library for human-friendly relative time and date formatting. This is a simple wrapper for [Intl.RelativeTimeFormat](https://tc39.es/ecma402/#relativetimeformat-objects).
+JavaScript library for human-friendly relative time and date formatting.
+This is a simple wrapper for [Intl.RelativeTimeFormat](https://tc39.es/ecma402/#relativetimeformat-objects).
 
-## [![MIT license](https://img.shields.io/github/license/unicorn-84/ci-workflow-testing)](https://github.com/unicorn-84/ci-workflow-testing/blob/master/LICENSE) [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+## [![MIT license](https://img.shields.io/github/license/unicorn-84/rel-time-format)](https://github.com/unicorn-84/rel-time-format/blob/master/LICENSE) [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
 ## Installation
 

@@ -30,9 +30,16 @@
   "homepage": "https://github.com/unicorn-84/rel-time-format#readme",
   "license": "MIT",
   "scripts": {
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "cm": "cz"
   },
   "devDependencies": {
+    "cz-conventional-changelog": "3.3.0",
     "semantic-release": "^19.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

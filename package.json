@@ -33,11 +33,13 @@
     "semantic-release": "semantic-release",
     "cm": "cz",
     "format": "prettier -c .",
+    "prebuild": "rimraf lib",
     "build": "tsc"
   },
   "devDependencies": {
     "cz-conventional-changelog": "3.3.0",
     "prettier": "2.5.1",
+    "rimraf": "3.0.2",
     "semantic-release": "^19.0.2",
     "typescript": "4.5.5"
   },

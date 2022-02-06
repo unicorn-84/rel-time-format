@@ -24,6 +24,10 @@
   ],
   "repository": "git@github.com:unicorn-84/rel-time-format.git",
   "author": "unicorn-84 <unicorn-84@ya.ru> (https://github.com/unicorn-84)",
+  "bugs": {
+    "url": "https://github.com/unicorn-84/rel-time-format/issues"
+  },
+  "homepage": "https://github.com/unicorn-84/rel-time-format#readme",
   "license": "MIT",
   "scripts": {
     "semantic-release": "semantic-release"

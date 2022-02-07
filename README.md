@@ -29,10 +29,46 @@ yarn add rel-time-format
 - The **rel-time-format** library is written using [ECMAScript Internationalization API](https://tc39.es/ecma402/#intl-object), which requires [Node.js](https://nodejs.org) version 14 or higher.
 
 ```js
-import rtf from 'rel-time-format';
+import { getRelYears } from 'rel-time-format';
 
-rtf(new Date()); //=> in 0 days
+getRelYears(new Date(), 'en', { numeric: 'auto' }); //=> this years
 ```
+
+## API
+
+Formats the date according to the locales, formatting options and the 'years' unit in human-friendly words relative to the current date.
+
+**_getRelYears_**(_`date`_: **`Date`**, _`locales`_?: **`string|string[]`**, _`options`_?: **`Object`**)
+
+- **`date`**: **`Required`** - The date to format.
+- **`locales`**: **`Optional`** - see [locales](#locales).
+- **`options`**: **`optional`** - see [options](#options).
+
+```js
+getRelYears(new Date(), 'en'); //=> in 0 years
+getRelYears(new Date(), 'ru', { numeric: 'auto' }); //=> в этом году
+```
+
+**_locales_**
+
+A string with a [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4), or an array of such strings.
+The `locales` argument is used to determine the locale used in a given operation. The JavaScript implementation examines locales, and then computes a locale it understands that comes closest to satisfying the expressed preference. See [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+
+**_options_**
+
+An object with some or all of options of [Intl.RelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#Parameters).
+Values:
+
+- **`localeMatcher`**:
+  - **`best fit`** (default)
+  - **`lookup`**
+- **`numeric`**:
+  - **`always`** (default, e.g., 1 day ago)
+  - **`auto`** (e.g., yesterday)
+- **`style`**:
+  - **`long`**: (default, e.g., in 1 month)
+  - **`short`**: (e.g., in 1 mo.)
+  - **`narrow`** (e.g., in 1 mo.)
 
 ## Support
 

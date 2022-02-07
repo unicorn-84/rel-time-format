@@ -1,3 +1,5 @@
+export { default as getRelYears } from './getRelYears.js';
+
 /**
  * Formats the date in human-friendly words relative to the current date.
  * @param {Date} targetDate The date to format.

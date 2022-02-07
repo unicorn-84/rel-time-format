@@ -26,7 +26,7 @@ const getRelYears = (
   options?: Intl.RelativeTimeFormatOptions
 ): string => {
   if (!(date instanceof Date)) {
-    throw new TypeError(`[rel-time-format]: '${date}' is not a Date object`);
+    throw new TypeError(`[rel-time-format]: '${date}' is not the Date object`);
   }
 
   const formatter = new Intl.RelativeTimeFormat(locales, options);

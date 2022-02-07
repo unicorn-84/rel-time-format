@@ -10,11 +10,11 @@ afterEach(() => {
 });
 
 describe.only('getRelYears', () => {
-  it('should throw an error, if the date in not the Date object', () => {
+  it('should throw an error, if the date is not the Date object', () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     expect(() => getRelYears()).toThrow(
-      "[rel-time-format]: 'undefined' is not a Date object"
+      "[rel-time-format]: 'undefined' is not the Date object"
     );
   });
 
@@ -26,13 +26,13 @@ describe.only('getRelYears', () => {
     expect(getRelYears(new Date(), 'ru')).toBe('через 0 лет');
   });
 
-  it('should return a relative time string according to formatting options', () => {
+  it('should return a relative time string according to the formatting options', () => {
     expect(getRelYears(new Date(), undefined, { numeric: 'auto' })).toBe(
       'this year'
     );
   });
 
-  it('should return a relative time string according to the locales and formatting options', () => {
+  it('should return a relative time string according to the locales and the formatting options', () => {
     expect(getRelYears(new Date(), 'ru', { numeric: 'auto' })).toBe(
       'в этом году'
     );

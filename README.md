@@ -28,6 +28,12 @@ yarn add rel-time-format
 
 - The **rel-time-format** library is written using [ECMAScript Internationalization API](https://tc39.es/ecma402/#intl-object), which requires [Node.js](https://nodejs.org) version 14 or higher.
 
+```js
+import rtf from 'rel-time-format';
+
+rtf(new Date()); //=> in 0 days
+```
+
 ## Support
 
 - Node.js >= 14

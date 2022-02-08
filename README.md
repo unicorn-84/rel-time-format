@@ -38,34 +38,35 @@ getRelYears(new Date(), 'en', { numeric: 'auto' }); //=> this years
 
 Formats the date according to the locales, formatting options and the 'years' unit in human-friendly words relative to the current date.
 
-**_getRelYears_**(_`date`_: **`Date`**, _`locales`_?: **`string|string[]`**, _`options`_?: **`Object`**)
+### getRelYears(date, [locales], [options])
 
-- **`date`**: **`Required`** - The date to format.
-- **`locales`**: **`Optional`** - see [locales](#locales).
-- **`options`**: **`optional`** - see [options](#options).
+- **date**: **`Date`** - The date to format. (_Required_)
+- **locales**: **`string|string[]`** - See [locales](#locales). (_Optional_)
+- **options**: **`Object`** - See [options](#options). (_Optional_)
 
 ```js
 getRelYears(new Date(), 'en'); //=> in 0 years
 getRelYears(new Date(), 'ru', { numeric: 'auto' }); //=> в этом году
+getRelYears(new Date(2022, 0), undefined, { numeric: 'auto' }); //=> e.g. this year
 ```
 
-**_locales_**
+### locales
 
 A string with a [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4), or an array of such strings.
 The `locales` argument is used to determine the locale used in a given operation. The JavaScript implementation examines locales, and then computes a locale it understands that comes closest to satisfying the expressed preference. See [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
 
-**_options_**
+### options
 
 An object with some or all of options of [Intl.RelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#Parameters).
 Values:
 
-- **`localeMatcher`**:
+- **localeMatcher**:
   - **`best fit`** (default)
   - **`lookup`**
-- **`numeric`**:
+- **numeric**:
   - **`always`** (default, e.g., 1 day ago)
   - **`auto`** (e.g., yesterday)
-- **`style`**:
+- **style**:
   - **`long`**: (default, e.g., in 1 month)
   - **`short`**: (e.g., in 1 mo.)
   - **`narrow`** (e.g., in 1 mo.)

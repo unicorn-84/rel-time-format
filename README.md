@@ -36,13 +36,13 @@ getRelYears(new Date(), 'en', { numeric: 'auto' }); //=> this years
 
 ## API
 
-### getRelYears(date, [locales], [options])
+### getRelYears(date[,locales[,options]])
 
 Formats the date according to the locales, formatting options and the 'years' unit in human-friendly words relative to the current date.
 
-- **date**: **`Date`** - The date to format. (_Required_)
-- **locales**: **`string|string[]`** - See [locales](#locales). (_Optional_)
-- **options**: **`Object`** - See [options](#options). (_Optional_)
+- **date**: **`Date`** (_required_) - The date to format.
+- **locales**: **`string|string[]`** (_optional_) - See [locales](#locales).
+- **options**: **`Object`** (_optional_) - See [options](#options).
 
 ```js
 getRelYears(new Date(), 'en'); //=> in 0 years
@@ -50,13 +50,13 @@ getRelYears(new Date(), 'ru', { numeric: 'auto' }); //=> в этом году
 getRelYears(new Date(2022, 0), undefined, { numeric: 'auto' }); //=> e.g. this year
 ```
 
-### getRelDays(date, [locales], [options])
+### getRelDays(date[,locales[,options]])
 
 Formats the date according to the locales, formatting options and the 'days' unit in human-friendly words relative to the current date.
 
-- **date**: **`Date`** - The date to format. (_Required_)
-- **locales**: **`string|string[]`** - See [locales](#locales). (_Optional_)
-- **options**: **`Object`** - See [options](#options). (_Optional_)
+- **date**: **`Date`** (_required_) - The date to format.
+- **locales**: **`string|string[]`** (_optional_) - See [locales](#locales).
+- **options**: **`Object`** (_optional_) - See [options](#options).
 
 ```js
 getRelDays(new Date(), 'en'); //=> in 0 days

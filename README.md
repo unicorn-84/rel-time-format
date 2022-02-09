@@ -36,9 +36,9 @@ getRelYears(new Date(), 'en', { numeric: 'auto' }); //=> this years
 
 ## API
 
-Formats the date according to the locales, formatting options and the 'years' unit in human-friendly words relative to the current date.
-
 ### getRelYears(date, [locales], [options])
+
+Formats the date according to the locales, formatting options and the 'years' unit in human-friendly words relative to the current date.
 
 - **date**: **`Date`** - The date to format. (_Required_)
 - **locales**: **`string|string[]`** - See [locales](#locales). (_Optional_)
@@ -48,6 +48,20 @@ Formats the date according to the locales, formatting options and the 'years' un
 getRelYears(new Date(), 'en'); //=> in 0 years
 getRelYears(new Date(), 'ru', { numeric: 'auto' }); //=> в этом году
 getRelYears(new Date(2022, 0), undefined, { numeric: 'auto' }); //=> e.g. this year
+```
+
+### getRelDays(date, [locales], [options])
+
+Formats the date according to the locales, formatting options and the 'days' unit in human-friendly words relative to the current date.
+
+- **date**: **`Date`** - The date to format. (_Required_)
+- **locales**: **`string|string[]`** - See [locales](#locales). (_Optional_)
+- **options**: **`Object`** - See [options](#options). (_Optional_)
+
+```js
+getRelDays(new Date(), 'en'); //=> in 0 days
+getRelDays(new Date(), 'ru', { numeric: 'auto' }); //=> сегодня
+getRelDays(new Date(2022, 0, 1), undefined, { numeric: 'auto' }); //=> e.g. 22 days ago
 ```
 
 ### locales

@@ -50,6 +50,20 @@ getRelYears(new Date(), 'ru', { numeric: 'auto' }); //=> в этом году
 getRelYears(new Date(2022, 0), undefined, { numeric: 'auto' }); //=> e.g. this year
 ```
 
+### getRelQuarters(date[,locales[,options]])
+
+Formats the date according to the locales, formatting options and the 'quarters' unit in human-friendly words relative to the current date.
+
+- **date**: **`Date`** (_required_) - The date to format.
+- **locales**: **`string|string[]`** (_optional_) - See [locales](#locales).
+- **options**: **`Object`** (_optional_) - See [options](#options).
+
+```js
+getRelQuarters(new Date(), 'en'); //=> in 0 quarters
+getRelQuarters(new Date(), 'ru', { numeric: 'auto' }); //=> в текущем квартале
+getRelQuarters(new Date(2022, 5), undefined, { numeric: 'auto' }); //=> e.g. in 1 quarter
+```
+
 ### getRelDays(date[,locales[,options]])
 
 Formats the date according to the locales, formatting options and the 'days' unit in human-friendly words relative to the current date.

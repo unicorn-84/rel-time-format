@@ -64,6 +64,20 @@ getRelQuarters(new Date(), 'ru', { numeric: 'auto' }); //=> в текущем к
 getRelQuarters(new Date(2022, 5), undefined, { numeric: 'auto' }); //=> e.g. in 1 quarter
 ```
 
+### getRelMonths(date[,locales[,options]])
+
+Formats the date according to the locales, formatting options and the 'months' unit in human-friendly words relative to the current date.
+
+- **date**: **`Date`** (_required_) - The date to format.
+- **locales**: **`string|string[]`** (_optional_) - See [locales](#locales).
+- **options**: **`Object`** (_optional_) - See [options](#options).
+
+```js
+getRelMonths(new Date(), 'en'); //=> in 0 months
+getRelMonths(new Date(), 'ru', { numeric: 'auto' }); //=> в этом месяце
+getRelMonths(new Date('2022-2-28')); //=> e.g. 1 month ago
+```
+
 ### getRelDays(date[,locales[,options]])
 
 Formats the date according to the locales, formatting options and the 'days' unit in human-friendly words relative to the current date.

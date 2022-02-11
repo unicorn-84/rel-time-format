@@ -38,7 +38,7 @@ getRelYears(new Date(), 'en', { numeric: 'auto' }); //=> this years
 
 ### getRelYears
 
-Formats the date according to the locales, formatting options and the 'years' unit in human-friendly words relative to the current date.
+Formats the date according to the [locales](#locales), [formatting options](#options) and the 'years' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
 
 #### Syntax
 
@@ -64,7 +64,7 @@ getRelYears(new Date('2022-01-01'), undefined, { numeric: 'auto' }); //=> e.g. t
 
 ### getRelQuarters
 
-Formats the date according to the locales, formatting options and the 'quarters' unit in human-friendly words relative to the current date.
+Formats the date according to the [locales](#locales), [formatting options](#options) and the 'quarters' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
 
 #### Syntax
 
@@ -90,7 +90,7 @@ getRelQuarters(new Date('2022-05-10'), undefined, { numeric: 'auto' }); //=> e.g
 
 ### getRelMonths
 
-Formats the date according to the locales, formatting options and the 'months' unit in human-friendly words relative to the current date.
+Formats the date according to the [locales](#locales), [formatting options](#options) and the 'months' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
 
 #### Syntax
 
@@ -116,7 +116,7 @@ getRelMonths(new Date('2022-2-28')); //=> e.g. 1 month ago
 
 ### getRelDays
 
-Formats the date according to the locales, formatting options and the 'days' unit in human-friendly words relative to the current date.
+Formats the date according to the [locales](#locales), [formatting options](#options) and the 'days' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
 
 #### Syntax
 

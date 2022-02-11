@@ -36,41 +36,77 @@ getRelYears(new Date(), 'en', { numeric: 'auto' }); //=> this years
 
 ## API
 
-### getRelYears(date[,locales[,options]])
+### getRelYears
 
 Formats the date according to the locales, formatting options and the 'years' unit in human-friendly words relative to the current date.
 
-- **date**: **`Date`** (_required_) - The date to format.
-- **locales**: **`string|string[]`** (_optional_) - See [locales](#locales).
-- **options**: **`Object`** (_optional_) - See [options](#options).
+#### Syntax
+
+> ```js
+> getRelYears(date);
+> getRelYears(date, locales);
+> getRelYears(date, locales, options);
+> ```
+
+#### Parameters
+
+- **`date`**: **`Date`** `Required` - The date to format.
+- **`locales`**: **`string|string[]`** `Optional` - See [locales](#locales).
+- **`options`**: **`Object`** `Optional` - See [options](#options).
+
+#### Examples
 
 ```js
 getRelYears(new Date(), 'en'); //=> in 0 years
 getRelYears(new Date(), 'ru', { numeric: 'auto' }); //=> в этом году
-getRelYears(new Date(2022, 0), undefined, { numeric: 'auto' }); //=> e.g. this year
+getRelYears(new Date('2022-01-01'), undefined, { numeric: 'auto' }); //=> e.g. this year
 ```
 
-### getRelQuarters(date[,locales[,options]])
+### getRelQuarters
 
 Formats the date according to the locales, formatting options and the 'quarters' unit in human-friendly words relative to the current date.
 
-- **date**: **`Date`** (_required_) - The date to format.
-- **locales**: **`string|string[]`** (_optional_) - See [locales](#locales).
-- **options**: **`Object`** (_optional_) - See [options](#options).
+#### Syntax
+
+> ```js
+> getRelQuarters(date);
+> getRelQuarters(date, locales);
+> getRelQuarters(date, locales, options);
+> ```
+
+#### Parameters
+
+- **`date`**: **`Date`** `Required` - The date to format.
+- **`locales`**: **`string|string[]`** `Optional` - See [locales](#locales).
+- **`options`**: **`Object`** `Optional` - See [options](#options).
+
+#### Examples
 
 ```js
 getRelQuarters(new Date(), 'en'); //=> in 0 quarters
 getRelQuarters(new Date(), 'ru', { numeric: 'auto' }); //=> в текущем квартале
-getRelQuarters(new Date(2022, 5), undefined, { numeric: 'auto' }); //=> e.g. in 1 quarter
+getRelQuarters(new Date('2022-05-10'), undefined, { numeric: 'auto' }); //=> e.g. in 1 quarter
 ```
 
-### getRelMonths(date[,locales[,options]])
+### getRelMonths
 
 Formats the date according to the locales, formatting options and the 'months' unit in human-friendly words relative to the current date.
 
-- **date**: **`Date`** (_required_) - The date to format.
-- **locales**: **`string|string[]`** (_optional_) - See [locales](#locales).
-- **options**: **`Object`** (_optional_) - See [options](#options).
+#### Syntax
+
+> ```js
+> getRelMonths(date);
+> getRelMonths(date, locales);
+> getRelMonths(date, locales, options);
+> ```
+
+#### Parameters
+
+- **`date`**: **`Date`** `Required` - The date to format.
+- **`locales`**: **`string|string[]`** `Optional` - See [locales](#locales).
+- **`options`**: **`Object`** `Optional` - See [options](#options).
+
+#### Examples
 
 ```js
 getRelMonths(new Date(), 'en'); //=> in 0 months
@@ -78,18 +114,30 @@ getRelMonths(new Date(), 'ru', { numeric: 'auto' }); //=> в этом месяц
 getRelMonths(new Date('2022-2-28')); //=> e.g. 1 month ago
 ```
 
-### getRelDays(date[,locales[,options]])
+### getRelDays
 
 Formats the date according to the locales, formatting options and the 'days' unit in human-friendly words relative to the current date.
 
-- **date**: **`Date`** (_required_) - The date to format.
-- **locales**: **`string|string[]`** (_optional_) - See [locales](#locales).
-- **options**: **`Object`** (_optional_) - See [options](#options).
+#### Syntax
+
+> ```js
+> getRelDays(date);
+> getRelDays(date, locales);
+> getRelDays(date, locales, options);
+> ```
+
+#### Parameters
+
+- **`date`**: **`Date`** `Required` - The date to format.
+- **`locales`**: **`string|string[]`** `Optional` - See [locales](#locales).
+- **`options`**: **`Object`** `Optional` - See [options](#options).
+
+#### Examples
 
 ```js
 getRelDays(new Date(), 'en'); //=> in 0 days
 getRelDays(new Date(), 'ru', { numeric: 'auto' }); //=> сегодня
-getRelDays(new Date(2022, 0, 1), undefined, { numeric: 'auto' }); //=> e.g. 22 days ago
+getRelDays(new Date('2022-01-22'), undefined, { numeric: 'auto' }); //=> e.g. 22 days ago
 ```
 
 ### locales
@@ -102,16 +150,16 @@ The `locales` argument is used to determine the locale used in a given operation
 An object with some or all of options of [Intl.RelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#Parameters).
 Values:
 
-- **localeMatcher**:
-  - **`best fit`** (default)
-  - **`lookup`**
-- **numeric**:
-  - **`always`** (default, e.g., 1 day ago)
-  - **`auto`** (e.g., yesterday)
-- **style**:
-  - **`long`**: (default, e.g., in 1 month)
-  - **`short`**: (e.g., in 1 mo.)
-  - **`narrow`** (e.g., in 1 mo.)
+- **`localeMatcher`**:
+  - "`best fit`" (default)
+  - "`lookup`"
+- **`numeric`**:
+  - "`always`" (default, e.g., `1 day ago`)
+  - "`auto`" (e.g., `yesterday`)
+- **`style`**:
+  - "`long`": (default, e.g., `in 1 month`)
+  - "`short`": (e.g., `in 1 mo.`)
+  - "`narrow`" (e.g., `in 1 mo.`)
 
 ## Support
 

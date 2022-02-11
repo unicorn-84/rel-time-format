@@ -9,7 +9,7 @@ afterEach(() => {
   jest.useRealTimers();
 });
 
-describe.skip('getRelQuarters', () => {
+describe('getRelQuarters', () => {
   it('should throw an error, if the date is not the Date object', () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
@@ -22,8 +22,8 @@ describe.skip('getRelQuarters', () => {
     expect(getRelQuarters(new Date())).toBe('in 0 quarters');
     expect(getRelQuarters(new Date('2022-05-01'))).toBe('in 1 quarter');
     expect(getRelQuarters(new Date('2021-12-01'))).toBe('1 quarter ago');
-    expect(getRelQuarters(new Date('1984-10-11'))).toBe('152 quarters ago');
-    expect(getRelQuarters(new Date('2084-10-11'))).toBe('in 248 months');
+    expect(getRelQuarters(new Date('1984-10-11'))).toBe('149 quarters ago');
+    expect(getRelQuarters(new Date('2084-10-11'))).toBe('in 251 quarters');
   });
 
   it('should return a relative time string according to the locales', () => {
@@ -35,10 +35,10 @@ describe.skip('getRelQuarters', () => {
       '1 квартал назад'
     );
     expect(getRelQuarters(new Date('1984-10-11'), 'ru')).toBe(
-      '152 квартала назад'
+      '149 кварталов назад'
     );
     expect(getRelQuarters(new Date('2084-10-11'), 'ru')).toBe(
-      'через 248 кварталов'
+      'через 251 квартал'
     );
   });
 
@@ -54,10 +54,10 @@ describe.skip('getRelQuarters', () => {
     ).toBe('last quarter');
     expect(
       getRelQuarters(new Date('1984-10-11'), undefined, { numeric: 'auto' })
-    ).toBe('152 quarters ago');
+    ).toBe('149 quarters ago');
     expect(
       getRelQuarters(new Date('2084-10-11'), undefined, { numeric: 'auto' })
-    ).toBe('in 248 months');
+    ).toBe('in 251 quarters');
   });
 
   it('should return a relative time string according to the locales and the formatting options', () => {
@@ -72,9 +72,9 @@ describe.skip('getRelQuarters', () => {
     ).toBe('в прошлом квартале');
     expect(
       getRelQuarters(new Date('1984-10-11'), 'ru', { numeric: 'auto' })
-    ).toBe('152 квартала назад');
+    ).toBe('149 кварталов назад');
     expect(
       getRelQuarters(new Date('2084-10-11'), 'ru', { numeric: 'auto' })
-    ).toBe('через 248 кварталов');
+    ).toBe('через 251 квартал');
   });
 });

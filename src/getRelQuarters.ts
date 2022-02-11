@@ -31,9 +31,12 @@ const getRelQuarters = (
 
   const formatter = new Intl.RelativeTimeFormat(locales, options);
 
+  const years = date.getFullYear() - new Date().getFullYear();
+
   const diff =
     Math.floor((date.getMonth() + 3) / 3) -
-    Math.floor((new Date().getMonth() + 3) / 3);
+    Math.floor((new Date().getMonth() + 3) / 3) +
+    years * 4;
 
   return formatter.format(diff, 'quarters');
 };

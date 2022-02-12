@@ -140,6 +140,32 @@ getRelDays(new Date(), 'ru', { numeric: 'auto' }); //=> сегодня
 getRelDays(new Date('2022-01-22'), undefined, { numeric: 'auto' }); //=> e.g. 22 days ago
 ```
 
+### getRelHours
+
+Formats the date according to the [locales](#locales), formatting [options](#options) and the 'hours' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
+
+#### Syntax
+
+> ```js
+> getRelHours(date);
+> getRelHours(date, locales);
+> getRelHours(date, locales, options);
+> ```
+
+#### Parameters
+
+- **`date`**: **`Date`** `Required` - The date to format.
+- **`locales`**: **`string|string[]`** `Optional` - See [locales](#locales).
+- **`options`**: **`Object`** `Optional` - See [options](#options).
+
+#### Examples
+
+```js
+getRelHours(new Date(), 'en'); //=> in 0 hours
+getRelHours(new Date(), 'ru', { numeric: 'auto' }); //=> в этот час
+getRelHours(new Date('2021-12-31T23:00:00'), undefined, { numeric: 'auto' }); //=> e.g. 1 hour ago
+```
+
 ### locales
 
 A string with a [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4), or an array of such strings.

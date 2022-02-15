@@ -15,7 +15,7 @@
  * @example
  *
  * getRelSeconds(new Date(), 'en', { numeric: 'auto' })
- * //=> this second
+ * //=> now
  */
 
 const getRelSeconds = (

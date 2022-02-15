@@ -246,7 +246,7 @@ Formats the date according to the [locales](#locales), formatting [options](#opt
 
 ```js
 getRelSeconds(new Date(), 'en'); //=> in 0 seconds
-getRelSeconds(new Date(), 'ru', { numeric: 'auto' }); //=> в эту секунду
+getRelSeconds(new Date(), 'ru', { numeric: 'auto' }); //=> сейчас
 getRelSeconds(new Date('2021-12-31T23:59:59'), undefined, { numeric: 'auto' }); //=> e.g. 1 seconds ago
 ```
 

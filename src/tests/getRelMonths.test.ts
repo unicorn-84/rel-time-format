@@ -9,7 +9,7 @@ afterEach(() => {
   jest.useRealTimers();
 });
 
-describe.only('getRelMonths', () => {
+describe('getRelMonths', () => {
   it('should throw an error, if the date is not the Date object', () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore

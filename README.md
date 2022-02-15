@@ -2,7 +2,7 @@
 
 JavaScript library for human-friendly relative date formatting.
 
-This is a simple wrapper for [Intl.RelativeTimeFormat](https://tc39.es/ecma402/#relativetimeformat-objects).
+This is a simple wrapper for [Intl.RelativeTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat).
 
 [![version](https://img.shields.io/npm/v/rel-time-format)](https://www.npmjs.com/package/ci-workflow-testing) [![build workflow](https://github.com/unicorn-84/rel-time-format/actions/workflows/build.yml/badge.svg)](https://github.com/unicorn-84/rel-time-format/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/unicorn-84/rel-time-format/branch/master/graph/badge.svg?token=5A76CUQ75O)](https://codecov.io/gh/unicorn-84/rel-time-format) [![MIT license](https://img.shields.io/github/license/unicorn-84/rel-time-format)](https://github.com/unicorn-84/rel-time-format/blob/master/LICENSE) [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
@@ -26,19 +26,21 @@ yarn add rel-time-format
 
 - The **rel-time-format** library is ESM.
 
-- The **rel-time-format** library is written using [ECMAScript Internationalization API](https://tc39.es/ecma402/#intl-object), which requires [Node.js](https://nodejs.org) version 14 or higher.
+- The **rel-time-format** library is written using [ECMAScript Internationalization API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl), which requires [Node.js](https://nodejs.org) version 14 or higher.
 
 ```js
-import { getRelYears } from 'rel-time-format';
+import { getRelYears, getReDays, getRelHours } from 'rel-time-format';
 
 getRelYears(new Date(), 'en', { numeric: 'auto' }); //=> this years
+getRelDays(new Date('2022-01-01')); //=> e.g. 45 days ago
+getRelHours(new Date(), 'ru'); // через 0 часов
 ```
 
 ## API
 
 ### getRelYears
 
-Formats the date according to the [locales](#locales), [formatting options](#options) and the 'years' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
+Formats the date according to the [locales](#locales), formatting [options](#options) and the 'years' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
 
 #### Syntax
 
@@ -64,7 +66,7 @@ getRelYears(new Date('2022-01-01'), undefined, { numeric: 'auto' }); //=> e.g. t
 
 ### getRelQuarters
 
-Formats the date according to the [locales](#locales), [formatting options](#options) and the 'quarters' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
+Formats the date according to the [locales](#locales), formatting [options](#options) and the 'quarters' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
 
 #### Syntax
 
@@ -90,7 +92,7 @@ getRelQuarters(new Date('2022-05-10'), undefined, { numeric: 'auto' }); //=> e.g
 
 ### getRelMonths
 
-Formats the date according to the [locales](#locales), [formatting options](#options) and the 'months' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
+Formats the date according to the [locales](#locales), formatting [options](#options) and the 'months' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
 
 #### Syntax
 
@@ -146,7 +148,7 @@ getRelWeeks(new Date('2020-02-28')); //=> e.g. 103 weeks ago
 
 ### getRelDays
 
-Formats the date according to the [locales](#locales), [formatting options](#options) and the 'days' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
+Formats the date according to the [locales](#locales), formatting [options](#options) and the 'days' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
 
 #### Syntax
 

@@ -232,7 +232,6 @@ The `locales` argument is used to determine the locale used in a given operation
 ### options
 
 An object with some or all of options of [Intl.RelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#Parameters).
-Values:
 
 - **`localeMatcher`**:
   - "`best fit`" (default)

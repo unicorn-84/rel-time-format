@@ -114,6 +114,36 @@ getRelMonths(new Date(), 'ru', { numeric: 'auto' }); //=> в этом месяц
 getRelMonths(new Date('2022-2-28')); //=> e.g. 1 month ago
 ```
 
+### getRelWeeks
+
+Formats the date according to the [locales](#locales), formatting [options](#options) and the 'weeks' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
+
+#### Important
+
+The first day of the week is Monday.
+
+#### Syntax
+
+> ```js
+> getRelWeeks(date);
+> getRelWeeks(date, locales);
+> getRelWeeks(date, locales, options);
+> ```
+
+#### Parameters
+
+- **`date`**: **`Date`** `Required` - The date to format.
+- **`locales`**: **`string|string[]`** `Optional` - See [locales](#locales).
+- **`options`**: **`Object`** `Optional` - See [options](#options).
+
+#### Examples
+
+```js
+getRelWeeks(new Date(), 'en'); //=> in 0 weeks
+getRelWeeks(new Date(), 'ru', { numeric: 'auto' }); //=> на этой неделе
+getRelWeeks(new Date('2020-02-28')); //=> e.g. 103 weeks ago
+```
+
 ### getRelDays
 
 Formats the date according to the [locales](#locales), [formatting options](#options) and the 'days' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.

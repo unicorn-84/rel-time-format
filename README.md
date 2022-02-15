@@ -224,6 +224,32 @@ getRelMinutes(new Date(), 'ru', { numeric: 'auto' }); //=> в эту минут�
 getRelMinutes(new Date('2021-12-31T23:59:00'), undefined, { numeric: 'auto' }); //=> e.g. 1 minute ago
 ```
 
+### getRelSeconds
+
+Formats the date according to the [locales](#locales), formatting [options](#options) and the 'seconds' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
+
+#### Syntax
+
+> ```js
+> getRelSeconds(date);
+> getRelSeconds(date, locales);
+> getRelSeconds(date, locales, options);
+> ```
+
+#### Parameters
+
+- **`date`**: **`Date`** `Required` - The date to format.
+- **`locales`**: **`string|string[]`** `Optional` - See [locales](#locales).
+- **`options`**: **`Object`** `Optional` - See [options](#options).
+
+#### Examples
+
+```js
+getRelSeconds(new Date(), 'en'); //=> in 0 seconds
+getRelSeconds(new Date(), 'ru', { numeric: 'auto' }); //=> в эту секунду
+getRelSeconds(new Date('2021-12-31T23:59:59'), undefined, { numeric: 'auto' }); //=> e.g. 1 seconds ago
+```
+
 ### locales
 
 A string with a [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4), or an array of such strings.

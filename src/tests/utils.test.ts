@@ -196,23 +196,6 @@ describe('getDiffInCalendarMonths', () => {
   it('should return the negative number of calendar months', () => {
     expect(
       getDiffInCalendarMonths(
-        new Date('2021-12-31T23:59:59'),
-        new Date(),
-        false
-      )
-    ).toBe(
-      differenceInCalendarMonths(new Date('2021-12-31T23:59:59'), new Date())
-    );
-    expect(
-      getDiffInCalendarMonths(
-        new Date('2021-12-31T23:59:59'),
-        new Date(),
-        false
-      )
-    ).toBe(-1);
-
-    expect(
-      getDiffInCalendarMonths(
         new Date(),
         new Date('2025-01-01T23:59:59'),
         false
@@ -227,6 +210,23 @@ describe('getDiffInCalendarMonths', () => {
         false
       )
     ).toBe(-36);
+
+    expect(
+      getDiffInCalendarMonths(
+        new Date('2021-12-31T23:59:59'),
+        new Date(),
+        false
+      )
+    ).toBe(
+      differenceInCalendarMonths(new Date('2021-12-31T23:59:59'), new Date())
+    );
+    expect(
+      getDiffInCalendarMonths(
+        new Date('2021-12-31T23:59:59'),
+        new Date(),
+        false
+      )
+    ).toBe(-1);
 
     expect(
       getDiffInCalendarMonths(

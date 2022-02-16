@@ -70,3 +70,50 @@ export const getDiffInCalendarMonths = (
 
   return abs ? Math.abs(months) : months;
 };
+
+/**
+ * Get the number of calendar weeks between the given dates.
+ * The week starts on Monday.
+ *
+ * @param {Date} targetDate The target date.
+ *
+ * @param {Date} baseDate The base date.
+ *
+ * @param {boolean} [abs=true] If `true` function returns the absolute value of a number.
+ *
+ * @returns The number of calendar weeks.
+ */
+
+export const getDiffInCalendarWeeks = (
+  targetDate: Date,
+  baseDate: Date,
+  abs = true
+) => {
+  // The number of days in the last week of the target date.
+  const daysInLastWeekOfTargetDate =
+    targetDate.getDay() === 0 ? 7 : targetDate.getDay();
+
+  // The number of days in the last week of the base date.
+  const daysInLastWeekOfBaseDate =
+    baseDate.getDay() === 0 ? 7 : baseDate.getDay();
+
+  // The number of days of the target date.
+  const daysOfTargetDate = Math.floor(
+    targetDate.getTime() / 1000 / 60 / 60 / 24
+  );
+
+  // The number of days of the base date.
+  const daysOfBaseDate = Math.floor(baseDate.getTime() / 1000 / 60 / 60 / 24);
+
+  // The number of weeks of the target date.
+  const weeksOfTargetDate =
+    Math.ceil((daysOfTargetDate - daysInLastWeekOfTargetDate) / 7) + 1;
+
+  // The number of weeks of the base date.
+  const weeksOfBaseDate =
+    Math.ceil((daysOfBaseDate - daysInLastWeekOfBaseDate) / 7) + 1;
+
+  const weeks = weeksOfTargetDate - weeksOfBaseDate;
+
+  return abs ? Math.abs(weeks) : weeks;
+};

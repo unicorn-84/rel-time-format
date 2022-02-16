@@ -2,6 +2,7 @@ import {
   getDiffInCalendarYears,
   getDiffInCalendarQuarters,
   getDiffInCalendarMonths,
+  getDiffInCalendarWeeks,
 } from '../utils';
 
 beforeEach(() => {
@@ -98,5 +99,34 @@ describe('getDiffInCalendarMonths', () => {
         false
       )
     ).toBe(-1);
+  });
+});
+
+describe('getDiffInCalendarWeeks', () => {
+  it('should return the positive number of calendar months', () => {
+    expect(getDiffInCalendarWeeks(new Date(), new Date())).toBe(0);
+    expect(getDiffInCalendarWeeks(new Date('2021-12-31'), new Date())).toBe(0);
+    expect(getDiffInCalendarWeeks(new Date(), new Date('2022-01-03'))).toBe(1);
+    expect(getDiffInCalendarWeeks(new Date(), new Date('2022-12-31'))).toBe(52);
+  });
+
+  it('should return the negative number of calendar months', () => {
+    expect(
+      getDiffInCalendarWeeks(new Date('2021-12-26'), new Date(), false)
+    ).toBe(-1);
+    expect(
+      getDiffInCalendarWeeks(
+        new Date('2020-01-01'),
+        new Date('2022-01-01'),
+        false
+      )
+    ).toBe(-104);
+    expect(
+      getDiffInCalendarWeeks(
+        new Date('2020-02-01'),
+        new Date('2020-03-01'),
+        false
+      )
+    ).toBe(-4);
   });
 });

@@ -57,6 +57,11 @@ export const getDiffInCalendarQuarters = (
  * @param {boolean} [abs=true] If `true` function returns the absolute value of a number.
  *
  * @returns The number of calendar months.
+ *
+ * @example
+ *
+ * getDiffInCalendarMonths(new Date('2022-01-01'), new Date('2021-01-01'))
+ * //=> 12
  */
 
 export const getDiffInCalendarMonths = (

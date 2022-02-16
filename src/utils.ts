@@ -139,7 +139,7 @@ export const getDiffInCalendarWeeks = (
 };
 
 /**
- * Get the number of calendar days between the given dates.
+ * Get the number of calendar days between the given dates. This means that the times are removed from the dates.
  *
  * @param {Date} targetDate The target date.
  *

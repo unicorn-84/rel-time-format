@@ -175,7 +175,7 @@ export const getDiffInCalendarDays = (
  *
  * @param {boolean} [abs=true] If `true` function returns the absolute value of a number.
  *
- * @returns The number of hours.
+ * @returns The number of calendar hours.
  *
  * @example
  *

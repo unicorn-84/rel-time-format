@@ -8,6 +8,11 @@
  * @param {boolean} [abs=true] If `true` function returns the absolute value of a number.
  *
  * @returns The number of calendar years.
+ *
+ * @example
+ *
+ * getDiffInCalendarYears(new Date('2024-01-01T23:59:59'), new Date('2023-01-01T23:59:59'))
+ * //=> 1
  */
 
 export const getDiffInCalendarYears = (

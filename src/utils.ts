@@ -160,9 +160,7 @@ export const getDiffInCalendarDays = (
   baseDate: Date,
   abs = true
 ) => {
-  const diff =
-    new Date(targetDate.toDateString()).getTime() -
-    new Date(baseDate.toDateString()).getTime();
+  const diff = targetDate.setHours(0, 0, 0, 0) - baseDate.setHours(0, 0, 0, 0);
 
   const days = Math.trunc(diff / 1000 / 60 / 60 / 24);
 

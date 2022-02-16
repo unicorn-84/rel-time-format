@@ -104,28 +104,33 @@ describe('getDiffInCalendarMonths', () => {
 });
 
 describe('getDiffInCalendarWeeks', () => {
-  it('should return the positive number of calendar months', () => {
+  it('should return the positive number of calendar weeks', () => {
     expect(getDiffInCalendarWeeks(new Date(), new Date())).toBe(0);
-    expect(getDiffInCalendarWeeks(new Date('2021-12-31'), new Date())).toBe(0);
-    expect(getDiffInCalendarWeeks(new Date(), new Date('2022-01-03'))).toBe(1);
-    expect(getDiffInCalendarWeeks(new Date(), new Date('2022-12-31'))).toBe(52);
+    expect(
+      getDiffInCalendarWeeks(new Date(), new Date('2022-01-03T23:59:59'))
+    ).toBe(1);
+    expect(
+      getDiffInCalendarWeeks(new Date(), new Date('2022-12-31T23:59:59'))
+    ).toBe(52);
+    expect(
+      getDiffInCalendarWeeks(
+        new Date('2020-03-01T00:00:00'),
+        new Date('2020-02-01T23:59:59')
+      )
+    ).toBe(4);
   });
 
-  it('should return the negative number of calendar months', () => {
+  it('should return the negative number of calendar weeks', () => {
     expect(
-      getDiffInCalendarWeeks(new Date('2021-12-26'), new Date(), false)
+      getDiffInCalendarWeeks(new Date('2021-12-26T23:59:59'), new Date(), false)
     ).toBe(-1);
     expect(
-      getDiffInCalendarWeeks(
-        new Date('2020-01-01'),
-        new Date('2022-01-01'),
-        false
-      )
-    ).toBe(-104);
+      getDiffInCalendarWeeks(new Date('2021-12-01:00:00:00'), new Date(), false)
+    ).toBe(-4);
     expect(
       getDiffInCalendarWeeks(
-        new Date('2020-02-01'),
-        new Date('2020-03-01'),
+        new Date('2020-02-01T00:00:00'),
+        new Date('2020-03-01T23:59:59'),
         false
       )
     ).toBe(-4);

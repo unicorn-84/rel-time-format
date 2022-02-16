@@ -95,23 +95,6 @@ describe('getDiffInCalendarQuarters', () => {
   it('should return the negative number of calendar months', () => {
     expect(
       getDiffInCalendarQuarters(
-        new Date('2021-12-31T23:59:59'),
-        new Date(),
-        false
-      )
-    ).toBe(
-      differenceInCalendarQuarters(new Date('2021-12-31T23:59:59'), new Date())
-    );
-    expect(
-      getDiffInCalendarQuarters(
-        new Date('2021-12-31T23:59:59'),
-        new Date(),
-        false
-      )
-    ).toBe(-1);
-
-    expect(
-      getDiffInCalendarQuarters(
         new Date(),
         new Date('2025-01-01T23:59:59'),
         false
@@ -126,6 +109,23 @@ describe('getDiffInCalendarQuarters', () => {
         false
       )
     ).toBe(-12);
+
+    expect(
+      getDiffInCalendarQuarters(
+        new Date('2021-12-31T23:59:59'),
+        new Date(),
+        false
+      )
+    ).toBe(
+      differenceInCalendarQuarters(new Date('2021-12-31T23:59:59'), new Date())
+    );
+    expect(
+      getDiffInCalendarQuarters(
+        new Date('2021-12-31T23:59:59'),
+        new Date(),
+        false
+      )
+    ).toBe(-1);
 
     expect(
       getDiffInCalendarQuarters(

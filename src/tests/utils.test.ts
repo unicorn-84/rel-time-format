@@ -1,4 +1,8 @@
-import { differenceInCalendarDays, differenceInCalendarWeeks } from 'date-fns';
+import {
+  differenceInCalendarDays,
+  differenceInCalendarWeeks,
+  differenceInCalendarMonths,
+} from 'date-fns';
 import {
   getDiffInCalendarYears,
   getDiffInCalendarQuarters,
@@ -76,31 +80,41 @@ describe('getDiffInCalendarQuarters', () => {
 
 describe('getDiffInCalendarMonths', () => {
   it('should return the positive number of calendar months', () => {
-    expect(getDiffInCalendarMonths(new Date(), new Date())).toBe(0);
-    expect(getDiffInCalendarMonths(new Date('2022-02-01'), new Date())).toBe(1);
+    expect(getDiffInCalendarMonths(new Date(), new Date())).toBe(
+      differenceInCalendarMonths(new Date(), new Date())
+    );
+    expect(getDiffInCalendarMonths(new Date('2022-02-01'), new Date())).toBe(
+      differenceInCalendarMonths(new Date('2022-02-01'), new Date())
+    );
     expect(
       getDiffInCalendarMonths(new Date('2022-01-01'), new Date('2021-01-01'))
-    ).toBe(12);
+    ).toBe(
+      differenceInCalendarMonths(new Date('2022-01-01'), new Date('2021-01-01'))
+    );
   });
 
   it('should return the negative number of calendar months', () => {
     expect(
       getDiffInCalendarMonths(new Date('2021-12-31'), new Date(), false)
-    ).toBe(-1);
+    ).toBe(differenceInCalendarMonths(new Date('2021-12-31'), new Date()));
     expect(
       getDiffInCalendarMonths(
         new Date('2023-01-01'),
         new Date('2025-01-01'),
         false
       )
-    ).toBe(-24);
+    ).toBe(
+      differenceInCalendarMonths(new Date('2023-01-01'), new Date('2025-01-01'))
+    );
     expect(
       getDiffInCalendarMonths(
         new Date('2020-02-29'),
         new Date('2020-03-01'),
         false
       )
-    ).toBe(-1);
+    ).toBe(
+      differenceInCalendarMonths(new Date('2020-02-29'), new Date('2020-03-01'))
+    );
   });
 });
 

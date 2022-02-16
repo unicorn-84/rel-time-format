@@ -141,16 +141,8 @@ export const getDiffInCalendarDays = (
   abs = true
 ) => {
   const diff =
-    new Date(
-      targetDate.getFullYear(),
-      targetDate.getMonth(),
-      targetDate.getDate()
-    ).getTime() -
-    new Date(
-      baseDate.getFullYear(),
-      baseDate.getMonth(),
-      baseDate.getDate()
-    ).getTime();
+    new Date(targetDate.toDateString()).getTime() -
+    new Date(baseDate.toDateString()).getTime();
 
   const days = Math.trunc(diff / 1000 / 60 / 60 / 24);
 

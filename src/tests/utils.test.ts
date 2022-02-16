@@ -22,7 +22,7 @@ describe('getDiffInCalendarYears', () => {
     ).toBe(2);
   });
 
-  it('should return the positive number of calendar years', () => {
+  it('should return the negative number of calendar years', () => {
     expect(
       getDiffInCalendarYears(new Date('2021-01-01'), new Date(), false)
     ).toBe(-1);

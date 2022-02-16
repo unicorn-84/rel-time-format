@@ -1,4 +1,8 @@
-import { getDiffInCalendarYears, getDiffInCalendarMonths } from '../utils';
+import {
+  getDiffInCalendarYears,
+  getDiffInCalendarQuarters,
+  getDiffInCalendarMonths,
+} from '../utils';
 
 beforeEach(() => {
   jest.useFakeTimers();
@@ -32,6 +36,38 @@ describe('getDiffInCalendarYears', () => {
     expect(
       getDiffInCalendarYears(new Date('1984-10-11'), new Date(), false)
     ).toBe(-38);
+  });
+});
+
+describe('getDiffInCalendarQuarters', () => {
+  it('should return the positive number of calendar months', () => {
+    expect(getDiffInCalendarQuarters(new Date(), new Date())).toBe(0);
+    expect(getDiffInCalendarQuarters(new Date('2022-05-01'), new Date())).toBe(
+      1
+    );
+    expect(
+      getDiffInCalendarQuarters(new Date('2022-01-01'), new Date('2021-01-01'))
+    ).toBe(4);
+  });
+
+  it('should return the negative number of calendar months', () => {
+    expect(
+      getDiffInCalendarQuarters(new Date('2021-12-31'), new Date(), false)
+    ).toBe(-1);
+    expect(
+      getDiffInCalendarQuarters(
+        new Date('2023-01-01'),
+        new Date('2025-01-01'),
+        false
+      )
+    ).toBe(-8);
+    expect(
+      getDiffInCalendarQuarters(
+        new Date('2020-05-01'),
+        new Date('2021-01-01'),
+        false
+      )
+    ).toBe(-3);
   });
 });
 

@@ -82,6 +82,11 @@ export const getDiffInCalendarMonths = (
  * @param {boolean} [abs=true] If `true` function returns the absolute value of a number.
  *
  * @returns The number of calendar weeks.
+ *
+ * @example
+ *
+ * getDiffInCalendarWeeks(new Date('2020-03-01T00:00:00'), new Date('2020-02-01T23:59:59'))
+ * //=> 4
  */
 
 export const getDiffInCalendarWeeks = (

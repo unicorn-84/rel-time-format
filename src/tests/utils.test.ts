@@ -123,6 +123,7 @@ describe('getDiffInCalendarWeeks', () => {
         weekStartsOn: 1,
       })
     );
+
     expect(
       getDiffInCalendarWeeks(
         new Date('2020-03-01T00:00:00'),

@@ -3,3 +3,4 @@ export { default as getDiffInCalendarSeconds } from './getDiffInCalendarSeconds.
 export { default as getDiffInCalendarMinutes } from './getDiffInCalendarMinutes.js';
 export { default as getDiffInCalendarHours } from './getDiffInCalendarHours.js';
 export { default as getDiffInCalendarDays } from './getDiffInCalendarDays.js';
+export { default as getDiffInCalendarWeeks } from './getDiffInCalendarWeeks.js';

@@ -2,13 +2,11 @@ import {
   differenceInCalendarYears,
   differenceInCalendarQuarters,
   differenceInCalendarMonths,
-  differenceInCalendarWeeks,
 } from 'date-fns';
 import {
   getDiffInCalendarYears,
   getDiffInCalendarQuarters,
   getDiffInCalendarMonths,
-  getDiffInCalendarWeeks,
 } from '../utils';
 
 beforeEach(() => {
@@ -296,100 +294,5 @@ describe('getDiffInCalendarMonths', () => {
         false
       )
     ).toBe(-1);
-  });
-});
-
-describe('getDiffInCalendarWeeks', () => {
-  it('should return the positive number of calendar weeks', () => {
-    expect(getDiffInCalendarWeeks(new Date(), new Date())).toBe(
-      differenceInCalendarWeeks(new Date(), new Date(), { weekStartsOn: 1 })
-    );
-    expect(getDiffInCalendarWeeks(new Date(), new Date())).toBe(0);
-
-    expect(
-      getDiffInCalendarWeeks(new Date(), new Date('2021-12-28T23:59:59'))
-    ).toBe(
-      differenceInCalendarWeeks(new Date(), new Date('2021-12-28T23:59:59'), {
-        weekStartsOn: 1,
-      })
-    );
-    expect(
-      getDiffInCalendarWeeks(new Date(), new Date('2021-12-28T23:59:59'))
-    ).toBe(0);
-
-    expect(
-      getDiffInCalendarWeeks(new Date('2022-12-31T23:59:59'), new Date())
-    ).toBe(
-      differenceInCalendarWeeks(new Date('2022-12-31T23:59:59'), new Date(), {
-        weekStartsOn: 1,
-      })
-    );
-    expect(
-      getDiffInCalendarWeeks(new Date('2022-12-31T23:59:59'), new Date())
-    ).toBe(52);
-
-    expect(
-      getDiffInCalendarWeeks(
-        new Date('2020-03-01T00:00:00'),
-        new Date('2020-02-01T23:59:59')
-      )
-    ).toBe(
-      differenceInCalendarWeeks(
-        new Date('2020-03-01T00:00:00'),
-        new Date('2020-02-01T23:59:59'),
-        { weekStartsOn: 1 }
-      )
-    );
-    expect(
-      getDiffInCalendarWeeks(
-        new Date('2020-03-01T00:00:00'),
-        new Date('2020-02-01T23:59:59')
-      )
-    ).toBe(4);
-  });
-
-  it('should return the negative number of calendar weeks', () => {
-    expect(
-      getDiffInCalendarWeeks(new Date(), new Date('2022-01-26T23:59:59'), false)
-    ).toBe(
-      differenceInCalendarWeeks(new Date(), new Date('2022-01-26T23:59:59'), {
-        weekStartsOn: 1,
-      })
-    );
-    expect(
-      getDiffInCalendarWeeks(new Date(), new Date('2022-01-26T23:59:59'), false)
-    ).toBe(-4);
-
-    expect(
-      getDiffInCalendarWeeks(new Date('2021-12-01:00:00:00'), new Date(), false)
-    ).toBe(
-      differenceInCalendarWeeks(new Date('2021-12-01:00:00:00'), new Date(), {
-        weekStartsOn: 1,
-      })
-    );
-    expect(
-      getDiffInCalendarWeeks(new Date('2021-12-01:00:00:00'), new Date(), false)
-    ).toBe(-4);
-
-    expect(
-      getDiffInCalendarWeeks(
-        new Date('2020-02-01T00:00:00'),
-        new Date('2020-03-01T23:59:59'),
-        false
-      )
-    ).toBe(
-      differenceInCalendarWeeks(
-        new Date('2020-02-01T00:00:00'),
-        new Date('2020-03-01T23:59:59'),
-        { weekStartsOn: 1 }
-      )
-    );
-    expect(
-      getDiffInCalendarWeeks(
-        new Date('2020-02-01T00:00:00'),
-        new Date('2020-03-01T23:59:59'),
-        false
-      )
-    ).toBe(-4);
   });
 });

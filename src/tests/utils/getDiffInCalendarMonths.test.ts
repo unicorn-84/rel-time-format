@@ -1,5 +1,5 @@
 import { differenceInCalendarMonths } from 'date-fns';
-import getDiffInCalendarMonths from '../../utils/getDiffInCalendarMonths';
+import { getDiffInCalendarMonths } from '../../utils';
 
 beforeEach(() => {
   jest.useFakeTimers();

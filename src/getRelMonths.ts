@@ -18,6 +18,8 @@
  * //=> this month
  */
 
+import getDiffInCalendarMonths from './getDiffInCalendarMonths';
+
 const getRelMonths = (
   date: Date,
   locales?:
@@ -31,11 +33,9 @@ const getRelMonths = (
 
   const formatter = new Intl.RelativeTimeFormat(locales, options);
 
-  const years = date.getFullYear() - new Date().getFullYear();
+  const months = getDiffInCalendarMonths(date, new Date(), false);
 
-  const diff = date.getMonth() - new Date().getMonth() + years * 12;
-
-  return formatter.format(diff, 'months');
+  return formatter.format(months, 'months');
 };
 
 export default getRelMonths;

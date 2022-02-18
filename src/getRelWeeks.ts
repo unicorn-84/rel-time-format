@@ -18,6 +18,8 @@
  * //=> this week
  */
 
+import getDiffInCalendarWeeks from './getDiffInCalendarWeeks';
+
 const getRelWeeks = (
   date: Date,
   locales?:
@@ -31,28 +33,8 @@ const getRelWeeks = (
 
   const formatter = new Intl.RelativeTimeFormat(locales, options);
 
-  // The number of days in the last week of the target date.
-  const daysInLastWeekOfDate = date.getDay() === 0 ? 7 : date.getDay();
-
-  // The number of days in the last week of the current date.
-  const daysInLastWeekOfNow =
-    new Date().getDay() === 0 ? 7 : new Date().getDay();
-
-  // The number of days of the target date.
-  const daysOfDate = Math.floor(date.getTime() / 1000 / 60 / 60 / 24);
-
-  // The number of days of the current date.
-  const daysOfNow = Math.floor(Date.now() / 1000 / 60 / 60 / 24);
-
-  // The number of weeks of the target date.
-  const weeksOfDate = Math.ceil((daysOfDate - daysInLastWeekOfDate) / 7) + 1;
-
-  // The number of weeks of the current date.
-  const weeksOfNow = Math.ceil((daysOfNow - daysInLastWeekOfNow) / 7) + 1;
-
-  const diff = weeksOfDate - weeksOfNow;
-
-  return formatter.format(diff, 'weeks');
+  const weeks = getDiffInCalendarWeeks(date, new Date(), false);
+  return formatter.format(weeks, 'weeks');
 };
 
 export default getRelWeeks;

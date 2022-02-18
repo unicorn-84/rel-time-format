@@ -2,23 +2,18 @@
  * Get the number of calendar seconds between the given dates. This means that milliseconds are removed from the dates.
  *
  * @param {Date} targetDate The target date.
- *
  * @param {Date} baseDate The base date.
- *
- * @param {boolean} [abs=true] If `true` function returns the absolute value of a number. Default: `true`.
- *
+ * @param {boolean} [abs=false] If `true` function returns the absolute value of a number. Default: `false`.
  * @returns The number of calendar seconds.
- *
  * @example
- *
- * getDiffInCalendarSeconds(new Date('2022-01-01T00:00:59.100'), new Date('2021-12-31T23:59:59.200'))
- * //=> 60
+ * getDiffInCalendarSeconds(new Date('2021-01-01T23:59:59.100'), new Date('2021-01-02T00:00:59.100')) //=> -60
+ * getDiffInCalendarSeconds(new Date('2021-12-31T23:59:59.200'), new Date('2022-01-01T00:00:59.100'), true) //=> 60
  */
 
 const getDiffInCalendarSeconds = (
   targetDate: Date,
   baseDate: Date,
-  abs = true
+  abs = false
 ) => {
   const diff = targetDate.setMilliseconds(0) - baseDate.setMilliseconds(0);
 

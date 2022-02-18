@@ -10,14 +10,6 @@ afterEach(() => {
 });
 
 describe('getRelWeeks', () => {
-  it('should throw an error, if the date is not the Date object', () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    expect(() => getRelWeeks()).toThrow(
-      "[rel-time-format]: 'undefined' is not the Date object"
-    );
-  });
-
   it('should return a relative time string', () => {
     expect(getRelWeeks(new Date())).toBe('in 0 weeks');
     expect(getRelWeeks(new Date('2022-01-03'))).toBe('in 1 week');

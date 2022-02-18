@@ -10,14 +10,6 @@ afterEach(() => {
 });
 
 describe('getRelYears', () => {
-  it('should throw an error, if the date is not the Date object', () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    expect(() => getRelYears()).toThrow(
-      "[rel-time-format]: 'undefined' is not the Date object"
-    );
-  });
-
   it('should return a relative time string', () => {
     expect(getRelYears(new Date())).toBe('in 0 years');
     expect(getRelYears(new Date('2023-01-01'))).toBe('in 1 year');

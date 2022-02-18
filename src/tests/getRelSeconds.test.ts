@@ -10,14 +10,6 @@ afterEach(() => {
 });
 
 describe('getRelSeconds', () => {
-  it('should throw an error, if the date is not the Date object', () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    expect(() => getRelSeconds()).toThrow(
-      "[rel-time-format]: 'undefined' is not the Date object"
-    );
-  });
-
   it('should return a relative time string', () => {
     expect(getRelSeconds(new Date())).toBe('in 0 seconds');
     expect(getRelSeconds(new Date('2022-01-01T00:00:01'))).toBe('in 1 second');

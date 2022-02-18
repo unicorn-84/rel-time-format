@@ -18,6 +18,8 @@
  * //=> this quarter
  */
 
+import getDiffInCalendarQuarters from './getDiffInCalendarQuarters';
+
 const getRelQuarters = (
   date: Date,
   locales?:
@@ -31,14 +33,9 @@ const getRelQuarters = (
 
   const formatter = new Intl.RelativeTimeFormat(locales, options);
 
-  const years = date.getFullYear() - new Date().getFullYear();
+  const quarters = getDiffInCalendarQuarters(date, new Date(), false);
 
-  const diff =
-    Math.floor((date.getMonth() + 3) / 3) -
-    Math.floor((new Date().getMonth() + 3) / 3) +
-    years * 4;
-
-  return formatter.format(diff, 'quarters');
+  return formatter.format(quarters, 'quarters');
 };
 
 export default getRelQuarters;

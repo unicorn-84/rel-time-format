@@ -15,7 +15,7 @@
  * //=> 4
  */
 
-import { getDiffInCalendarYears } from './index.js';
+import getDiffInCalendarYears from './getDiffInCalendarYears.js';
 
 const getDiffInCalendarQuarters = (
   targetDate: Date,

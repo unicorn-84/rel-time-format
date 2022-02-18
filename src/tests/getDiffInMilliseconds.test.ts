@@ -1,4 +1,4 @@
-import { getDiffInMilliseconds } from '../../utils';
+import getDiffInMilliseconds from '../getDiffInMilliseconds';
 
 beforeEach(() => {
   jest.useFakeTimers();

@@ -10,14 +10,6 @@ afterEach(() => {
 });
 
 describe('getRelMonths', () => {
-  it('should throw an error, if the date is not the Date object', () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    expect(() => getRelMonths()).toThrow(
-      "[rel-time-format]: 'undefined' is not the Date object"
-    );
-  });
-
   it('should return a relative time string', () => {
     expect(getRelMonths(new Date())).toBe('in 0 months');
     expect(getRelMonths(new Date('2022-02-01'))).toBe('in 1 month');

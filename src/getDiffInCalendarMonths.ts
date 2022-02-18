@@ -15,7 +15,7 @@
  * //=> 12
  */
 
-import { getDiffInCalendarYears } from './index.js';
+import getDiffInCalendarYears from './getDiffInCalendarYears.js';
 
 const getDiffInCalendarMonths = (
   targetDate: Date,

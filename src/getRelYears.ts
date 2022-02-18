@@ -18,6 +18,8 @@
  * //=> this year
  */
 
+import getDiffInCalendarYears from './getDiffInCalendarYears';
+
 const getRelYears = (
   date: Date,
   locales?:
@@ -31,9 +33,9 @@ const getRelYears = (
 
   const formatter = new Intl.RelativeTimeFormat(locales, options);
 
-  const diff = date.getFullYear() - new Date().getFullYear();
+  const years = getDiffInCalendarYears(date, new Date(), false);
 
-  return formatter.format(diff, 'years');
+  return formatter.format(years, 'years');
 };
 
 export default getRelYears;

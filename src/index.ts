@@ -1,3 +1,4 @@
+export { default as getDiffInHours } from './getDiffInHours.js';
 export { default as getDiffInMinutes } from './getDiffInMinutes.js';
 export { default as getDiffInSeconds } from './getDiffInSeconds.js';
 export { default as getDiffInMilliseconds } from './getDiffInMilliseconds.js';

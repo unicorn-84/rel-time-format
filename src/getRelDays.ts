@@ -18,6 +18,8 @@
  * //=> this day
  */
 
+import getDiffInCalendarDays from './getDiffInCalendarDays';
+
 const getRelDays = (
   date: Date,
   locales?:
@@ -31,9 +33,7 @@ const getRelDays = (
 
   const formatter = new Intl.RelativeTimeFormat(locales, options);
 
-  const diff = date.getTime() - new Date().getTime();
-
-  const days = Math.trunc(diff / 1000 / 60 / 60 / 24);
+  const days = getDiffInCalendarDays(date, new Date(), false);
 
   return formatter.format(days, 'days');
 };

@@ -7,4 +7,5 @@ export { default as getRelHours } from './getRelHours.js';
 export { default as getRelMinutes } from './getRelMinutes.js';
 export { default as getRelSeconds } from './getRelSeconds.js';
 
+export { default as getDiffInCalendarMinutes } from './getDiffInCalendarMinutes.js';
 export { default as getDiffInCalendarSeconds } from './getDiffInCalendarSeconds.js';

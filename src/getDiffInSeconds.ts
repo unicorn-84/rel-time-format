@@ -1,7 +1,7 @@
 import getDiffInMilliseconds from './getDiffInMilliseconds.js';
 
 /**
- * Get the number of full seconds between the given dates
+ * Get the number of full seconds between two dates. The `Math.trunc()` is a rounding method.
  *
  * @param {Date} targetDate The target date.
  * @param {Date} baseDate The base date.

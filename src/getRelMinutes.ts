@@ -18,6 +18,8 @@
  * //=> this minute
  */
 
+import getDiffInCalendarMinutes from './getDiffInCalendarMinutes';
+
 const getRelMinutes = (
   date: Date,
   locales?:
@@ -31,9 +33,7 @@ const getRelMinutes = (
 
   const formatter = new Intl.RelativeTimeFormat(locales, options);
 
-  const diff = date.getTime() - new Date().getTime();
-
-  const minutes = Math.trunc(diff / 1000 / 60);
+  const minutes = getDiffInCalendarMinutes(date, new Date(), false);
 
   return formatter.format(minutes, 'minutes');
 };

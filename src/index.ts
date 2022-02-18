@@ -1,3 +1,4 @@
+export { default as getDiffInWeeks } from './getDiffInWeeks.js';
 export { default as getDiffInDays } from './getDiffInDays.js';
 export { default as getDiffInHours } from './getDiffInHours.js';
 export { default as getDiffInMinutes } from './getDiffInMinutes.js';

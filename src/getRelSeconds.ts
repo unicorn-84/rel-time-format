@@ -18,6 +18,8 @@
  * //=> now
  */
 
+import getDiffInCalendarSeconds from './getDiffInCalendarSeconds';
+
 const getRelSeconds = (
   date: Date,
   locales?:
@@ -31,9 +33,7 @@ const getRelSeconds = (
 
   const formatter = new Intl.RelativeTimeFormat(locales, options);
 
-  const diff = date.getTime() - new Date().getTime();
-
-  const seconds = Math.trunc(diff / 1000);
+  const seconds = getDiffInCalendarSeconds(date, new Date(), false);
 
   return formatter.format(seconds, 'seconds');
 };

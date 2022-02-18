@@ -18,6 +18,8 @@
  * //=> this hour
  */
 
+import getDiffInCalendarHours from './getDiffInCalendarHours';
+
 const getRelHours = (
   date: Date,
   locales?:
@@ -31,9 +33,7 @@ const getRelHours = (
 
   const formatter = new Intl.RelativeTimeFormat(locales, options);
 
-  const diff = date.getTime() - new Date().getTime();
-
-  const hours = Math.trunc(diff / 1000 / 60 / 60);
+  const hours = getDiffInCalendarHours(date, new Date(), false);
 
   return formatter.format(hours, 'hours');
 };

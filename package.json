@@ -3,7 +3,10 @@
   "version": "0.0.0-development",
   "description": "A simple wrapper for Intl.RelativeTimeFormat",
   "type": "module",
-  "exports": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./utils": "./lib/utils/index.js"
+  },
   "typings": "./lib/index.d.js",
   "main": "./lib/index.js",
   "files": [

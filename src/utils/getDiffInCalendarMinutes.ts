@@ -15,7 +15,8 @@ const getDiffInCalendarMinutes = (
   baseDate: Date,
   abs = false
 ) => {
-  const diff = targetDate.setSeconds(0, 0) - baseDate.setSeconds(0, 0);
+  const diff =
+    new Date(targetDate).setSeconds(0, 0) - new Date(baseDate).setSeconds(0, 0);
 
   const minutes = Math.trunc(diff / 1000 / 60);
 

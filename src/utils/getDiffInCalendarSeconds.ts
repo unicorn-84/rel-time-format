@@ -15,7 +15,9 @@ const getDiffInCalendarSeconds = (
   baseDate: Date,
   abs = false
 ) => {
-  const diff = targetDate.setMilliseconds(0) - baseDate.setMilliseconds(0);
+  const diff =
+    new Date(targetDate).setMilliseconds(0) -
+    new Date(baseDate).setMilliseconds(0);
 
   const seconds = Math.trunc(diff / 1000);
 

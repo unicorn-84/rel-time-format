@@ -25,10 +25,11 @@ const getDiffInCalendarWeeks = (
 
   // The number of days of the target date.
   const daysOfTargetDate =
-    targetDate.setHours(0, 0, 0, 0) / 1000 / 60 / 60 / 24;
+    new Date(targetDate).setHours(0, 0, 0, 0) / 1000 / 60 / 60 / 24;
 
   // The number of days of the base date.
-  const daysOfBaseDate = baseDate.setHours(0, 0, 0, 0) / 1000 / 60 / 60 / 24;
+  const daysOfBaseDate =
+    new Date(baseDate).setHours(0, 0, 0, 0) / 1000 / 60 / 60 / 24;
 
   // The number of weeks of the target date.
   const weeksOfTargetDate =

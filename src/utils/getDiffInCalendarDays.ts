@@ -15,7 +15,9 @@ const getDiffInCalendarDays = (
   baseDate: Date,
   abs = false
 ) => {
-  const diff = targetDate.setHours(0, 0, 0, 0) - baseDate.setHours(0, 0, 0, 0);
+  const diff =
+    new Date(targetDate).setHours(0, 0, 0, 0) -
+    new Date(baseDate).setHours(0, 0, 0, 0);
 
   const days = Math.trunc(diff / 1000 / 60 / 60 / 24);
 

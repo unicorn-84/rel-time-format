@@ -7,7 +7,6 @@
  * @returns The number of calendar hours.
  * @example
  * getDiffInCalendarHours(new Date('2021-12-31T00:59:59'), new Date('2022-01-01T23:59:59')) //=> 47
- * getDiffInCalendarHours(new Date('2021-01-01T23:59:59'), new Date('2021-01-02T23:59:59'), true) //=> 24
  */
 
 const getDiffInCalendarHours = (

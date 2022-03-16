@@ -7,7 +7,6 @@
  * @returns The number of calendar weeks.
  * @example
  * getDiffInCalendarWeeks(new Date('2022-01-31T23:59:59'), new Date('2022-03-01T00:00:00')) //=> -4
- * getDiffInCalendarWeeks(new Date('2022-03-01T00:00:00'), new Date('2022-03-21T23:59:59'), true) //=> 3
  */
 
 const getDiffInCalendarWeeks = (

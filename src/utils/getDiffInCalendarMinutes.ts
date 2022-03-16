@@ -7,7 +7,6 @@
  * @returns The number of calendar minutes.
  * @example
  * getDiffInCalendarMinutes(new Date('2021-01-01T23:59:59'), new Date('2021-01-02T00:00:59')) //=> -1
- * getDiffInCalendarMinutes(new Date('2021-12-31T23:59:59'), new Date('2022-01-01T00:59:59'), true) //=> 60
  */
 
 const getDiffInCalendarMinutes = (

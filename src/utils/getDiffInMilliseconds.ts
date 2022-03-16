@@ -7,7 +7,6 @@
  * @returns The number of milliseconds.
  * @example
  * getDiffInMilliseconds(new Date('2021-01-01T23:59:59.100'), new Date('2021-01-02T00:00:00.100')) //=> -1000
- * getDiffInMilliseconds(new Date('2021-12-31T23:59:59.200'), new Date('2022-01-01T00:00:00.100'), true) //=> 900
  */
 
 const getDiffInMilliseconds = (

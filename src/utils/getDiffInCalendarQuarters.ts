@@ -7,7 +7,6 @@
  * @returns The number of calendar quarters.
  * @example
  * getDiffInCalendarQuarters(new Date('2021-01-01T23:59:59'), new Date('2022-01-01T23:59:59')) //=> -4
- * getDiffInCalendarQuarters(new Date('2020-05-01T23:59:59'), new Date('2021-01-01T23:59:59'), true) //=> 3
  */
 
 import getDiffInCalendarYears from './getDiffInCalendarYears.js';

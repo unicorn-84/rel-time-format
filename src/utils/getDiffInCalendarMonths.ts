@@ -7,7 +7,6 @@
  * @returns The number of calendar months.
  * @example
  * getDiffInCalendarMonths(new Date('2021-01-01T23:59:59'), new Date('2022-01-01T23:59:59')) //=> -12
- * getDiffInCalendarMonths(new Date('2020-02-29T23:59:59'), new Date('2020-03-01T23:59:59'), true) //=> 1
  */
 
 import getDiffInCalendarYears from './getDiffInCalendarYears.js';

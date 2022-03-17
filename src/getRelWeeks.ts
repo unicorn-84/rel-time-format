@@ -1,4 +1,4 @@
-import getDiffInCalendarWeeks from './utils/getDiffInCalendarWeeks.js';
+import getDiffInCalendarWeeks from './getDiffInCalendarWeeks.js';
 
 /**
  * Formats the date according to the [locales](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation), formatting [options](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#parameters) and the 'weeks' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date. The week starts on Monday.

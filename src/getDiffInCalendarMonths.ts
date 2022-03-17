@@ -1,3 +1,5 @@
+import getDiffInCalendarYears from './getDiffInCalendarYears.js';
+
 /**
  * Get the number of calendar months between the given dates.
  *
@@ -8,8 +10,6 @@
  * @example
  * getDiffInCalendarMonths(new Date('2021-01-01T23:59:59'), new Date('2022-01-01T23:59:59')) //=> -12
  */
-
-import getDiffInCalendarYears from './getDiffInCalendarYears.js';
 
 const getDiffInCalendarMonths = (
   targetDate: Date,

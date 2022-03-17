@@ -1,3 +1,5 @@
+import getDiffInCalendarYears from './getDiffInCalendarYears.js';
+
 /**
  * Get the number of calendar quarters between the given dates.
  *
@@ -8,8 +10,6 @@
  * @example
  * getDiffInCalendarQuarters(new Date('2021-01-01T23:59:59'), new Date('2022-01-01T23:59:59')) //=> -4
  */
-
-import getDiffInCalendarYears from './getDiffInCalendarYears.js';
 
 const getDiffInCalendarQuarters = (
   targetDate: Date,

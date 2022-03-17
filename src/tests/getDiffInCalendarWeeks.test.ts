@@ -1,4 +1,4 @@
-import getDiffInCalendarWeeks from '../utils/getDiffInCalendarWeeks';
+import getDiffInCalendarWeeks from '../getDiffInCalendarWeeks';
 
 beforeEach(() => {
   jest.useFakeTimers();

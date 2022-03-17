@@ -1,7 +1,5 @@
 ## API
 
-### Table of contents
-
 - [getRelYears](#getRelYears)
 
 - [getRelQuarters](#getRelQuarters)
@@ -18,7 +16,25 @@
 
 - [getRelSeconds](#getRelSeconds)
 
-### getRelYears
+- [getDiffInCalendarYears](#getDiffInCalendarYears)
+
+- [getDiffInCalendarQuarters](#getDiffInCalendarQuarters)
+
+- [getDiffInCalendarMonths](#getDiffInCalendarMonths)
+
+- [getDiffInCalendarWeeks](#getDiffInCalendarWeeks)
+
+- [getDiffInCalendarDays](#getDiffInCalendarDays)
+
+- [getDiffInCalendarHours](#getDiffInCalendarHours)
+
+- [getDiffInCalendarMinutes](#getDiffInCalendarMinutes)
+
+- [getDiffInCalendarSeconds](#getDiffInCalendarSeconds)
+
+- [getDiffInMilliseconds](#getDiffInMilliseconds)
+
+### `getRelYears`
 
 Formats the date according to the [locales](#locales), formatting [options](#options) and the 'years' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
 
@@ -44,7 +60,7 @@ getRelYears(new Date(), 'ru', { numeric: 'auto' }); //=> в этом году
 getRelYears(new Date('2022-01-01'), undefined, { numeric: 'auto' }); //=> e.g. this year
 ```
 
-### getRelQuarters
+### `getRelQuarters`
 
 Formats the date according to the [locales](#locales), formatting [options](#options) and the 'quarters' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
 
@@ -70,7 +86,7 @@ getRelQuarters(new Date(), 'ru', { numeric: 'auto' }); //=> в текущем к
 getRelQuarters(new Date('2022-05-10'), undefined, { numeric: 'auto' }); //=> e.g. in 1 quarter
 ```
 
-### getRelMonths
+### `getRelMonths`
 
 Formats the date according to the [locales](#locales), formatting [options](#options) and the 'months' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
 
@@ -96,13 +112,13 @@ getRelMonths(new Date(), 'ru', { numeric: 'auto' }); //=> в этом месяц
 getRelMonths(new Date('2022-2-28')); //=> e.g. 1 month ago
 ```
 
-### getRelWeeks
+### `getRelWeeks`
 
 Formats the date according to the [locales](#locales), formatting [options](#options) and the 'weeks' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
 
 #### Important
 
-The first day of the week is Monday.
+The week starts on Monday.
 
 #### Syntax
 
@@ -126,7 +142,7 @@ getRelWeeks(new Date(), 'ru', { numeric: 'auto' }); //=> на этой неде�
 getRelWeeks(new Date('2020-02-28')); //=> e.g. 103 weeks ago
 ```
 
-### getRelDays
+### `getRelDays`
 
 Formats the date according to the [locales](#locales), formatting [options](#options) and the 'days' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
 
@@ -152,7 +168,7 @@ getRelDays(new Date(), 'ru', { numeric: 'auto' }); //=> сегодня
 getRelDays(new Date('2022-01-22'), undefined, { numeric: 'auto' }); //=> e.g. 22 days ago
 ```
 
-### getRelHours
+### `getRelHours`
 
 Formats the date according to the [locales](#locales), formatting [options](#options) and the 'hours' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
 
@@ -178,7 +194,7 @@ getRelHours(new Date(), 'ru', { numeric: 'auto' }); //=> в этот час
 getRelHours(new Date('2021-12-31T23:00:00'), undefined, { numeric: 'auto' }); //=> e.g. 1 hour ago
 ```
 
-### getRelMinutes
+### `getRelMinutes`
 
 Formats the date according to the [locales](#locales), formatting [options](#options) and the 'minutes' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
 
@@ -204,7 +220,7 @@ getRelMinutes(new Date(), 'ru', { numeric: 'auto' }); //=> в эту минут�
 getRelMinutes(new Date('2021-12-31T23:59:00'), undefined, { numeric: 'auto' }); //=> e.g. 1 minute ago
 ```
 
-### getRelSeconds
+### `getRelSeconds`
 
 Formats the date according to the [locales](#locales), formatting [options](#options) and the 'seconds' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
 
@@ -230,12 +246,295 @@ getRelSeconds(new Date(), 'ru', { numeric: 'auto' }); //=> сейчас
 getRelSeconds(new Date('2021-12-31T23:59:59'), undefined, { numeric: 'auto' }); //=> e.g. 1 seconds ago
 ```
 
-### locales
+### `getDiffInCalendarYears`
+
+Get the number of calendar years between the given dates.
+
+#### Syntax
+
+> ```js
+> getDiffInCalendarYears(targetDate, baseDate);
+> getDiffInCalendarYears(targetDate, baseDate, abs);
+> ```
+
+#### Parameters
+
+- **`targetDate`**: **`Date`** `Required` - The first date.
+- **`baseDate`**: **`Date`** `Required` - The second date.
+- **`abs`**: **`Boolean`** `Optional` - If `true` function returns the absolute value of a number. Default: `false`.
+
+#### Examples
+
+```js
+getDiffInCalendarYears(
+  new Date('2024-01-01T23:59:59'),
+  new Date('2023-01-01T23:59:59')
+); //=> 1
+getDiffInCalendarYears(
+  new Date('2023-01-01T23:59:59'),
+  new Date('2025-01-01T23:59:59'),
+  true
+); //=> 2
+```
+
+### `getDiffInCalendarQuarters`
+
+Get the number of calendar quarters between the given dates.
+
+#### Syntax
+
+> ```js
+> getDiffInCalendarQuarters(targetDate, baseDate);
+> getDiffInCalendarQuarters(targetDate, baseDate, abs);
+> ```
+
+#### Parameters
+
+- **`targetDate`**: **`Date`** `Required` - The first date.
+- **`baseDate`**: **`Date`** `Required` - The second date.
+- **`abs`**: **`Boolean`** `Optional` - If `true` function returns the absolute value of a number. Default: `false`.
+
+#### Examples
+
+```js
+getDiffInCalendarQuarters(
+  new Date('2021-01-01T23:59:59'),
+  new Date('2022-01-01T23:59:59')
+); //=> -4
+getDiffInCalendarQuarters(
+  new Date('2020-05-01T23:59:59'),
+  new Date('2021-01-01T23:59:59'),
+  true
+); //=> 3
+```
+
+### `getDiffInCalendarMonths`
+
+Get the number of calendar months between the given dates.
+
+#### Syntax
+
+> ```js
+> getDiffInCalendarMonths(targetDate, baseDate);
+> getDiffInCalendarMonths(targetDate, baseDate, abs);
+> ```
+
+#### Parameters
+
+- **`targetDate`**: **`Date`** `Required` - The first date.
+- **`baseDate`**: **`Date`** `Required` - The second date.
+- **`abs`**: **`Boolean`** `Optional` - If `true` function returns the absolute value of a number. Default: `false`.
+
+#### Examples
+
+```js
+getDiffInCalendarMonths(
+  new Date('2021-01-01T23:59:59'),
+  new Date('2022-01-01T23:59:59')
+); //=> -12
+getDiffInCalendarMonths(
+  new Date('2020-02-29T23:59:59'),
+  new Date('2020-03-01T23:59:59'),
+  true
+); //=> 1
+```
+
+### `getDiffInCalendarWeeks`
+
+Get the number of calendar weeks between the given dates.
+
+#### Important
+
+The week starts on Monday.
+
+#### Syntax
+
+> ```js
+> getDiffInCalendarWeeks(targetDate, baseDate);
+> getDiffInCalendarWeeks(targetDate, baseDate, abs);
+> ```
+
+#### Parameters
+
+- **`targetDate`**: **`Date`** `Required` - The first date.
+- **`baseDate`**: **`Date`** `Required` - The second date.
+- **`abs`**: **`Boolean`** `Optional` - If `true` function returns the absolute value of a number. Default: `false`.
+
+#### Examples
+
+```js
+getDiffInCalendarWeeks(
+  new Date('2022-01-31T23:59:59'),
+  new Date('2022-03-01T00:00:00')
+); //=> -4
+getDiffInCalendarWeeks(
+  new Date('2022-03-01T00:00:00'),
+  new Date('2022-03-21T23:59:59'),
+  true
+); //=> 3
+```
+
+### `getDiffInCalendarDays`
+
+Get the number of calendar days between the given dates. This means that the times are removed from the dates.
+
+#### Syntax
+
+> ```js
+> getDiffInCalendarDays(targetDate, baseDate);
+> getDiffInCalendarDays(targetDate, baseDate, abs);
+> ```
+
+#### Parameters
+
+- **`targetDate`**: **`Date`** `Required` - The first date.
+- **`baseDate`**: **`Date`** `Required` - The second date.
+- **`abs`**: **`Boolean`** `Optional` - If `true` function returns the absolute value of a number. Default: `false`.
+
+#### Examples
+
+```js
+getDiffInCalendarDays(
+  new Date('2021-12-31T23:59:59'),
+  new Date('2022-01-01T00:00:00')
+); //=> -1
+getDiffInCalendarDays(
+  new Date('2021-01-01T00:00:00'),
+  new Date('2022-01-01T23:59:59'),
+  true
+); //=> 365
+```
+
+### `getDiffInCalendarHours`
+
+Get the number of calendar hours between the given dates. This means that minutes, seconds and milliseconds are removed from the dates.
+
+#### Syntax
+
+> ```js
+> getDiffInCalendarHours(targetDate, baseDate);
+> getDiffInCalendarHours(targetDate, baseDate, abs);
+> ```
+
+#### Parameters
+
+- **`targetDate`**: **`Date`** `Required` - The first date.
+- **`baseDate`**: **`Date`** `Required` - The second date.
+- **`abs`**: **`Boolean`** `Optional` - If `true` function returns the absolute value of a number. Default: `false`.
+
+#### Examples
+
+```js
+getDiffInCalendarHours(
+  new Date('2021-12-31T00:59:59'),
+  new Date('2022-01-01T23:59:59')
+); //=> -47
+getDiffInCalendarHours(
+  new Date('2021-01-01T23:59:59'),
+  new Date('2021-01-02T23:59:59'),
+  true
+); //=> 24
+```
+
+### `getDiffInCalendarMinutes`
+
+Get the number of calendar minutes between the given dates. This means that seconds and milliseconds are removed from the dates.
+
+#### Syntax
+
+> ```js
+> getDiffInCalendarMinutes(targetDate, baseDate);
+> getDiffInCalendarMinutes(targetDate, baseDate, abs);
+> ```
+
+#### Parameters
+
+- **`targetDate`**: **`Date`** `Required` - The first date.
+- **`baseDate`**: **`Date`** `Required` - The second date.
+- **`abs`**: **`Boolean`** `Optional` - If `true` function returns the absolute value of a number. Default: `false`.
+
+#### Examples
+
+```js
+getDiffInCalendarMinutes(
+  new Date('2021-01-01T23:59:59'),
+  new Date('2021-01-02T00:00:59')
+); //=> -1
+getDiffInCalendarMinutes(
+  new Date('2021-12-31T23:59:59'),
+  new Date('2022-01-01T00:59:59'),
+  true
+); //=> 60
+```
+
+### `getDiffInCalendarSeconds`
+
+Get the number of calendar seconds between the given dates. This means that milliseconds are removed from the dates.
+
+#### Syntax
+
+> ```js
+> getDiffInCalendarSeconds(targetDate, baseDate);
+> getDiffInCalendarSeconds(targetDate, baseDate, abs);
+> ```
+
+#### Parameters
+
+- **`targetDate`**: **`Date`** `Required` - The first date.
+- **`baseDate`**: **`Date`** `Required` - The second date.
+- **`abs`**: **`Boolean`** `Optional` - If `true` function returns the absolute value of a number. Default: `false`.
+
+#### Examples
+
+```js
+getDiffInCalendarSeconds(
+  new Date('2021-01-01T23:59:59.100'),
+  new Date('2021-01-02T00:00:59.100')
+); //=> -60
+getDiffInCalendarSeconds(
+  new Date('2021-12-31T23:59:59.200'),
+  new Date('2022-01-01T00:00:59.100'),
+  true
+); //=> 60
+```
+
+### `getDiffInMilliseconds`
+
+Get the number of milliseconds between the given dates.
+
+#### Syntax
+
+> ```js
+> getDiffInMilliseconds(targetDate, baseDate);
+> getDiffInMilliseconds(targetDate, baseDate, abs);
+> ```
+
+#### Parameters
+
+- **`targetDate`**: **`Date`** `Required` - The first date.
+- **`baseDate`**: **`Date`** `Required` - The second date.
+- **`abs`**: **`Boolean`** `Optional` - If `true` function returns the absolute value of a number. Default: `false`.
+
+#### Examples
+
+```js
+getDiffInMilliseconds(
+  new Date('2021-01-01T23:59:59.100'),
+  new Date('2021-01-02T00:00:00.100')
+); //=> -1000
+getDiffInMilliseconds(
+  new Date('2021-12-31T23:59:59.200'),
+  new Date('2022-01-01T00:00:00.100'),
+  true
+); //=> 900
+```
+
+### `locales`
 
 A string with a [BCP 47 language tag](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4), or an array of such strings.
 The `locales` argument is used to determine the locale used in a given operation. The JavaScript implementation examines locales, and then computes a locale it understands that comes closest to satisfying the expressed preference. See [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
 
-### options
+### `options`
 
 An object with some or all of options of [Intl.RelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#Parameters).
 

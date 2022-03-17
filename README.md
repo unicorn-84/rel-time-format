@@ -36,23 +36,9 @@ getRelDays(new Date('2022-01-01')); //=> e.g. 45 days ago
 getRelHours(new Date(), 'ru'); // через 0 часов
 ```
 
-## [API](https://github.com/unicorn-84/rel-time-format/blob/master/API.md)
+## API
 
-- [getRelYears](https://github.com/unicorn-84/rel-time-format/blob/master/API.md#getRelYears)
-
-- [getRelQuarters](https://github.com/unicorn-84/rel-time-format/blob/master/API.md#getRelQuarters)
-
-- [getRelMonths](https://github.com/unicorn-84/rel-time-format/blob/master/API.md#getRelMonths)
-
-- [getRelWeeks](https://github.com/unicorn-84/rel-time-format/blob/master/API.md#getRelWeeks)
-
-- [getRelDays](https://github.com/unicorn-84/rel-time-format/blob/master/API.md#getRelDays)
-
-- [getRelHours](https://github.com/unicorn-84/rel-time-format/blob/master/API.md#getRelHours)
-
-- [getRelMinutes](https://github.com/unicorn-84/rel-time-format/blob/master/API.md#getRelMinutes)
-
-- [getRelSeconds](https://github.com/unicorn-84/rel-time-format/blob/master/API.md#getRelSeconds)
+See [API](https://github.com/unicorn-84/rel-time-format/blob/master/API.md).
 
 ## Support
 

@@ -1,5 +1,23 @@
 ## API
 
+### Table of contents
+
+- [getRelYears](#getRelYears)
+
+- [getRelQuarters](#getRelQuarters)
+
+- [getRelMonths](#getRelMonths)
+
+- [getRelWeeks](#getRelWeeks)
+
+- [getRelDays](#getRelDays)
+
+- [getRelHours](#getRelHours)
+
+- [getRelMinutes](#getRelMinutes)
+
+- [getRelSeconds](#getRelSeconds)
+
 ### getRelYears
 
 Formats the date according to the [locales](#locales), formatting [options](#options) and the 'years' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.

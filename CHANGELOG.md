@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## v2.1.0 - 2022-03-17
 
 ### Added
 
-- Added 9 new modules:
+- Added modules:
+
   - `getDiffInCalendarYears`
   - `getDiffInCalendarQuarters`
   - `getDiffInCalendarMonths`
@@ -19,3 +20,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `getDiffInCalendarMinutes`
   - `getDiffInCalendarSeconds`
   - `getDiffInMilliseconds`
+
+## v2.0.0 - 2022-02-16
+
+### Added
+
+- Added modules:
+  - `getRelYears`
+  - `getRelQuarters`
+  - `getRelMonths`
+  - `getRelWeeks`
+  - `getRelDays`
+  - `getRelHours`
+  - `getRelMinutes`
+  - `getRelSeconds`
+
+### Changed
+
+- **BREAKING**: remove `rtf` module.
+
+## v1.0.0 - 2022-02-07
+
+### Added
+
+- Added modules:
+
+  - `rtf`

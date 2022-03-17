@@ -10,14 +10,6 @@ afterEach(() => {
 });
 
 describe('getRelDays', () => {
-  it('should throw an error, if the date is not the Date object', () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    expect(() => getRelDays()).toThrow(
-      "[rel-time-format]: 'undefined' is not the Date object"
-    );
-  });
-
   it('should return a relative time string', () => {
     expect(getRelDays(new Date())).toBe('in 0 days');
     expect(getRelDays(new Date('2022-01-02'))).toBe('in 1 day');

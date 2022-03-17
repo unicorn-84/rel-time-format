@@ -3,7 +3,10 @@
   "version": "0.0.0-development",
   "description": "A simple wrapper for Intl.RelativeTimeFormat",
   "type": "module",
-  "exports": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./utils": "./lib/utils/index.js"
+  },
   "typings": "./lib/index.d.js",
   "main": "./lib/index.js",
   "files": [
@@ -48,6 +51,7 @@
     "@typescript-eslint/eslint-plugin": "5.10.2",
     "@typescript-eslint/parser": "5.10.2",
     "cz-conventional-changelog": "3.3.0",
+    "date-fns": "2.28.0",
     "eslint": "8.8.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-import": "2.25.4",

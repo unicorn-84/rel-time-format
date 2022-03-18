@@ -1,4 +1,4 @@
-import getRelWeeks from '../getRelWeeks';
+import { getRelWeeks } from '..';
 
 beforeEach(() => {
   jest.useFakeTimers();

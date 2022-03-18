@@ -1,4 +1,4 @@
-import getRelQuarters from '../getRelQuarters';
+import { getRelQuarters } from '..';
 
 beforeEach(() => {
   jest.useFakeTimers();

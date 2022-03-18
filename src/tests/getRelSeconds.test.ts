@@ -1,4 +1,4 @@
-import getRelSeconds from '../getRelSeconds';
+import { getRelSeconds } from '..';
 
 beforeEach(() => {
   jest.useFakeTimers();

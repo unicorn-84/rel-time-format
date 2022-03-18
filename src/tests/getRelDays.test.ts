@@ -1,4 +1,4 @@
-import getRelDays from '../getRelDays';
+import { getRelDays } from '..';
 
 beforeEach(() => {
   jest.useFakeTimers();

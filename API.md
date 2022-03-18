@@ -1,5 +1,7 @@
 ## API
 
+- [getRelTime](#getRelTime)
+
 - [getRelYears](#getRelYears)
 
 - [getRelQuarters](#getRelQuarters)
@@ -33,6 +35,32 @@
 - [getDiffInCalendarSeconds](#getDiffInCalendarSeconds)
 
 - [getDiffInMilliseconds](#getDiffInMilliseconds)
+
+### `getRelTime`
+
+Formats the date according to the [locales](#locales) and formatting [options](#options) in human-friendly words relative to the current date.
+
+#### Syntax
+
+> ```js
+> getRelTime(date);
+> getRelTime(date, locales);
+> getRelTime(date, locales, options);
+> ```
+
+#### Parameters
+
+- **`date`**: **`Date`** `Required` - The date to format.
+- **`locales`**: **`string|string[]`** `Optional` - See [locales](#locales).
+- **`options`**: **`Object`** `Optional` - See [options](#options).
+
+#### Examples
+
+```js
+getRelTime(new Date(), 'en'); //=> in 0 seconds
+getRelTime(new Date(), 'en', { numeric: 'auto' }); //=> now
+getRelTime(new Date(), 'ru', { numeric: 'auto' }); //=> сейчас
+```
 
 ### `getRelYears`
 

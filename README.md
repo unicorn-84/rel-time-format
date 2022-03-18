@@ -42,7 +42,7 @@ See [API](https://github.com/unicorn-84/rel-time-format/blob/master/API.md).
 
 ## Examples
 
-See [examples](https://github.com/unicorn-84/rel-time-format/blob/master/EXAMPLE.md).
+See [examples](https://github.com/unicorn-84/rel-time-format/blob/master/EXAMPLES.md).
 
 ## Support
 

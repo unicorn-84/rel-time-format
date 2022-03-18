@@ -40,6 +40,10 @@ getRelTime(new Date(), 'ru', { numeric: 'auto' }); //=> сейчас
 
 See [API](https://github.com/unicorn-84/rel-time-format/blob/master/API.md).
 
+## Examples
+
+See [examples](https://github.com/unicorn-84/rel-time-format/blob/master/EXAMPLE.md).
+
 ## Support
 
 - Node.js >= 14

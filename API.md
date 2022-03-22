@@ -1,49 +1,44 @@
-# API
+## API
 
-## Table of contents
+Table of contents
 
-- Modules
+- [getRelTime](#getRelTime)
 
-  - [getRelTime](#getRelTime)
+- [getRelYears](#getRelYears)
 
-  - [getRelYears](#getRelYears)
+- [getRelQuarters](#getRelQuarters)
 
-  - [getRelQuarters](#getRelQuarters)
+- [getRelMonths](#getRelMonths)
 
-  - [getRelMonths](#getRelMonths)
+- [getRelWeeks](#getRelWeeks)
 
-  - [getRelWeeks](#getRelWeeks)
+- [getRelDays](#getRelDays)
 
-  - [getRelDays](#getRelDays)
+- [getRelHours](#getRelHours)
 
-  - [getRelHours](#getRelHours)
+- [getRelMinutes](#getRelMinutes)
 
-  - [getRelMinutes](#getRelMinutes)
+- [getRelSeconds](#getRelSeconds)
 
-  - [getRelSeconds](#getRelSeconds)
+- [getDiffInCalendarYears](#getDiffInCalendarYears)
 
-  - [getDiffInCalendarYears](#getDiffInCalendarYears)
+- [getDiffInCalendarQuarters](#getDiffInCalendarQuarters)
 
-  - [getDiffInCalendarQuarters](#getDiffInCalendarQuarters)
+- [getDiffInCalendarMonths](#getDiffInCalendarMonths)
 
-  - [getDiffInCalendarMonths](#getDiffInCalendarMonths)
+- [getDiffInCalendarWeeks](#getDiffInCalendarWeeks)
 
-  - [getDiffInCalendarWeeks](#getDiffInCalendarWeeks)
+- [getDiffInCalendarDays](#getDiffInCalendarDays)
 
-  - [getDiffInCalendarDays](#getDiffInCalendarDays)
+- [getDiffInCalendarHours](#getDiffInCalendarHours)
 
-  - [getDiffInCalendarHours](#getDiffInCalendarHours)
+- [getDiffInCalendarMinutes](#getDiffInCalendarMinutes)
 
-  - [getDiffInCalendarMinutes](#getDiffInCalendarMinutes)
+- [getDiffInCalendarSeconds](#getDiffInCalendarSeconds)
 
-  - [getDiffInCalendarSeconds](#getDiffInCalendarSeconds)
+- [getDiffInMilliseconds](#getDiffInMilliseconds)
 
-  - [getDiffInMilliseconds](#getDiffInMilliseconds)
-
-- Parameters
-  - [options](#options)
-
-## Modules
+- [options](#options)
 
 ### `getRelTime`
 

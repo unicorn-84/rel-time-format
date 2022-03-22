@@ -31,9 +31,9 @@ yarn add rel-time-format
 ```js
 import { getRelTime } from 'rel-time-format';
 
-getRelTime(new Date(), 'en'); //=> in 0 seconds
-getRelTime(new Date(), 'en', { numeric: 'auto' }); //=> now
-getRelTime(new Date(), 'ru', { numeric: 'auto' }); //=> сейчас
+getRelTime(new Date(), { locales: 'en' }); //=> in 0 seconds
+getRelTime(new Date(), { locales: 'en' numeric: 'auto' }); //=> now
+getRelTime(new Date(), { locales: 'ru' numeric: 'auto' }); //=> сейчас
 ```
 
 ## API

@@ -23,60 +23,72 @@ describe('getRelSeconds', () => {
   });
 
   it('should return a relative time string according to the locales', () => {
-    expect(getRelSeconds(new Date(), 'ru')).toBe('через 0 секунд');
-    expect(getRelSeconds(new Date('2022-01-01T00:00:01'), 'ru')).toBe(
-      'через 1 секунду'
-    );
-    expect(getRelSeconds(new Date('2021-12-31T23:59:59'), 'ru')).toBe(
-      '1 секунду назад'
-    );
-    expect(getRelSeconds(new Date('2021-12-31T23:59:30'), 'ru')).toBe(
-      '30 секунд назад'
-    );
-    expect(getRelSeconds(new Date('2022-01-01T00:10:15'), 'ru')).toBe(
-      'через 615 секунд'
-    );
+    expect(getRelSeconds(new Date(), { locales: 'ru' })).toBe('через 0 секунд');
+    expect(
+      getRelSeconds(new Date('2022-01-01T00:00:01'), { locales: 'ru' })
+    ).toBe('через 1 секунду');
+    expect(
+      getRelSeconds(new Date('2021-12-31T23:59:59'), { locales: 'ru' })
+    ).toBe('1 секунду назад');
+    expect(
+      getRelSeconds(new Date('2021-12-31T23:59:30'), { locales: 'ru' })
+    ).toBe('30 секунд назад');
+    expect(
+      getRelSeconds(new Date('2022-01-01T00:10:15'), { locales: 'ru' })
+    ).toBe('через 615 секунд');
   });
 
   it('should return a relative time string according to the formatting options', () => {
-    expect(getRelSeconds(new Date(), undefined, { numeric: 'auto' })).toBe(
-      'now'
-    );
+    expect(getRelSeconds(new Date(), { numeric: 'auto' })).toBe('now');
     expect(
-      getRelSeconds(new Date('2022-01-01T00:00:01'), undefined, {
+      getRelSeconds(new Date('2022-01-01T00:00:01'), {
         numeric: 'auto',
       })
     ).toBe('in 1 second');
     expect(
-      getRelSeconds(new Date('2021-12-31T23:59:59'), undefined, {
+      getRelSeconds(new Date('2021-12-31T23:59:59'), {
         numeric: 'auto',
       })
     ).toBe('1 second ago');
     expect(
-      getRelSeconds(new Date('2021-12-31T23:59:30'), undefined, {
+      getRelSeconds(new Date('2021-12-31T23:59:30'), {
         numeric: 'auto',
       })
     ).toBe('30 seconds ago');
     expect(
-      getRelSeconds(new Date('2022-01-01T00:10:15'), undefined, {
+      getRelSeconds(new Date('2022-01-01T00:10:15'), {
         numeric: 'auto',
       })
     ).toBe('in 615 seconds');
   });
 
   it('should return a relative time string according to the locales and the formatting options', () => {
-    expect(getRelSeconds(new Date(), 'ru', { numeric: 'auto' })).toBe('сейчас');
+    expect(getRelSeconds(new Date(), { locales: 'ru', numeric: 'auto' })).toBe(
+      'сейчас'
+    );
     expect(
-      getRelSeconds(new Date('2022-01-01T00:00:01'), 'ru', { numeric: 'auto' })
+      getRelSeconds(new Date('2022-01-01T00:00:01'), {
+        locales: 'ru',
+        numeric: 'auto',
+      })
     ).toBe('через 1 секунду');
     expect(
-      getRelSeconds(new Date('2021-12-31T23:59:59'), 'ru', { numeric: 'auto' })
+      getRelSeconds(new Date('2021-12-31T23:59:59'), {
+        locales: 'ru',
+        numeric: 'auto',
+      })
     ).toBe('1 секунду назад');
     expect(
-      getRelSeconds(new Date('2021-12-31T23:59:30'), 'ru', { numeric: 'auto' })
+      getRelSeconds(new Date('2021-12-31T23:59:30'), {
+        locales: 'ru',
+        numeric: 'auto',
+      })
     ).toBe('30 секунд назад');
     expect(
-      getRelSeconds(new Date('2022-01-01T00:10:15'), 'ru', { numeric: 'auto' })
+      getRelSeconds(new Date('2022-01-01T00:10:15'), {
+        locales: 'ru',
+        numeric: 'auto',
+      })
     ).toBe('через 615 секунд');
   });
 });

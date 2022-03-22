@@ -543,8 +543,6 @@ getDiffInMilliseconds(
 ); //=> 900
 ```
 
-## Parameters
-
 ### `options`
 
 An object with [the locales and the formatting options](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#parameters).

@@ -1,4 +1,5 @@
 import getDiffInCalendarYears from './getDiffInCalendarYears.js';
+import type { TGetDiff } from './types.js';
 
 /**
  * Get the number of calendar quarters between the given dates.
@@ -11,9 +12,9 @@ import getDiffInCalendarYears from './getDiffInCalendarYears.js';
  * getDiffInCalendarQuarters(new Date('2021-01-01T23:59:59'), new Date('2022-01-01T23:59:59')) //=> -4
  */
 
-const getDiffInCalendarQuarters = (
-  targetDate: Date,
-  baseDate: Date,
+const getDiffInCalendarQuarters: TGetDiff = (
+  targetDate,
+  baseDate,
   abs = false
 ) => {
   const years = getDiffInCalendarYears(targetDate, baseDate, false);

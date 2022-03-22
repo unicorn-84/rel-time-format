@@ -1,3 +1,5 @@
+import type { TGetDiff } from './types.js';
+
 /**
  * Get the number of calendar days between the given dates. This means that the times are removed from the dates.
  *
@@ -9,11 +11,7 @@
  * getDiffInCalendarDays(new Date('2021-12-31T23:59:59'), new Date('2022-01-01T00:00:00')) //=> -1
  */
 
-const getDiffInCalendarDays = (
-  targetDate: Date,
-  baseDate: Date,
-  abs = false
-) => {
+const getDiffInCalendarDays: TGetDiff = (targetDate, baseDate, abs = false) => {
   const diff =
     new Date(targetDate).setHours(0, 0, 0, 0) -
     new Date(baseDate).setHours(0, 0, 0, 0);

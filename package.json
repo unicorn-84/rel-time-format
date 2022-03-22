@@ -34,7 +34,7 @@
   "scripts": {
     "semantic-release": "semantic-release",
     "cm": "cz",
-    "format": "prettier -c .",
+    "format": "prettier -c -w .",
     "prebuild": "rimraf lib",
     "build": "tsc",
     "test": "jest",

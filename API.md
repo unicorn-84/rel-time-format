@@ -42,99 +42,103 @@ Table of contents
 
 ### `getRelTime`
 
-Formats the date according to the [locales and formatting options](#options) in human-friendly words relative to the current date.
+Formats the target date according to the [locales and formatting options](#options) in human-friendly words relative to the given base date.
 
 #### Syntax
 
 > ```js
-> getRelTime(date);
-> getRelTime(date, options);
+> getRelTime(targetDate, baseDate);
+> getRelTime(targetDate, baseDate, options);
 > ```
 
 #### Parameters
 
-- **`date`**: **`Date`** `Required` - The date to format.
+- **`targetDate`**: **`Date`** `Required` - The date to format.
+- **`baseDate`**: **`Date`** `Required` - The date to compare with.
 - **`options`**: **`Object`** `Optional` - See [options](#options).
 
 #### Examples
 
 ```js
-getRelTime(new Date(), { locales: 'en' }); //=> in 0 seconds
-getRelTime(new Date(), { locales: 'ru', numeric: 'auto' }); //=> сейчас
+getRelTime(new Date(), new Date(), { locales: 'en' }); //=> in 0 seconds
+getRelTime(new Date(), new Date(), { locales: 'ru', numeric: 'auto' }); //=> сейчас
 ```
 
 ### `getRelYears`
 
-Formats the date according to [the locales and the formatting options](#options) and the 'years' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
+Formats the target date according to [the locales and the formatting options](#options) and the 'years' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the given base date.
 
 #### Syntax
 
 > ```js
-> getRelYears(date);
-> getRelYears(date, options);
+> getRelYears(targetDate, baseDate);
+> getRelYears(targetDate, baseDate, options);
 > ```
 
 #### Parameters
 
-- **`date`**: **`Date`** `Required` - The date to format.
+- **`targetDate`**: **`Date`** `Required` - The date to format.
+- **`baseDate`**: **`Date`** `Required` - The date to compare with.
 - **`options`**: **`Object`** `Optional` - See [options](#options).
 
 #### Examples
 
 ```js
-getRelYears(new Date(), { locales: 'en' }); //=> in 0 years
-getRelYears(new Date(), { locales: 'ru', numeric: 'auto' }); //=> в этом году
+getRelYears(new Date(), new Date(), { locales: 'en' }); //=> in 0 years
+getRelYears(new Date(), new Date(), { locales: 'ru', numeric: 'auto' }); //=> в этом году
 ```
 
 ### `getRelQuarters`
 
-Formats the date according to [the locales and the formatting options](#options) and the 'quarters' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
+Formats the target date according to [the locales and the formatting options](#options) and the 'quarters' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the given base date.
 
 #### Syntax
 
 > ```js
-> getRelQuarters(date);
-> getRelQuarters(date, options);
+> getRelQuarters(targetDate, baseDate);
+> getRelQuarters(targetDate, baseDate, options);
 > ```
 
 #### Parameters
 
-- **`date`**: **`Date`** `Required` - The date to format.
+- **`targetDate`**: **`Date`** `Required` - The date to format.
+- **`baseDate`**: **`Date`** `Required` - The date to compare with.
 - **`options`**: **`Object`** `Optional` - See [options](#options).
 
 #### Examples
 
 ```js
-getRelQuarters(new Date(), { locales: 'en' }); //=> in 0 quarters
-getRelQuarters(new Date(), { locales: 'ru', numeric: 'auto' }); //=> в текущем квартале
+getRelQuarters(new Date(), new Date(), { locales: 'en' }); //=> in 0 quarters
+getRelQuarters(new Date(), new Date(), { locales: 'ru', numeric: 'auto' }); //=> в текущем квартале
 ```
 
 ### `getRelMonths`
 
-Formats the date according to [the locales and the formatting options](#options) and the 'months' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
+Formats the target date according to [the locales and the formatting options](#options) and the 'months' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the given base date.
 
 #### Syntax
 
 > ```js
-> getRelMonths(date);
-> getRelMonths(date, options);
+> getRelMonths(targetDate, baseDate);
+> getRelMonths(targetDate, baseDate, options);
 > ```
 
 #### Parameters
 
-- **`date`**: **`Date`** `Required` - The date to format.
+- **`targetDate`**: **`Date`** `Required` - The date to format.
+- **`baseDate`**: **`Date`** `Required` - The date to compare with.
 - **`options`**: **`Object`** `Optional` - See [options](#options).
 
 #### Examples
 
 ```js
-getRelMonths(new Date(), { locales: 'en' }); //=> in 0 months
-getRelMonths(new Date(), { locales: 'ru', { numeric: 'auto' }); //=> в этом месяце
+getRelMonths(new Date(), new Date(), { locales: 'en' }); //=> in 0 months
+getRelMonths(new Date(), new Date(), { locales: 'ru', { numeric: 'auto' }); //=> в этом месяце
 ```
 
 ### `getRelWeeks`
 
-Formats the date according to [the locales and the formatting options](#options) and the 'weeks' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
+Formats the target date according to [the locales and the formatting options](#options) and the 'weeks' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the given base date.
 
 #### Important
 
@@ -143,112 +147,117 @@ The week starts on Monday.
 #### Syntax
 
 > ```js
-> getRelWeeks(date);
-> getRelWeeks(date, options);
+> getRelWeeks(targetDate, baseDate);
+> getRelWeeks(targetDate, baseDate, options);
 > ```
 
 #### Parameters
 
-- **`date`**: **`Date`** `Required` - The date to format.
+- **`targetDate`**: **`Date`** `Required` - The date to format.
+- **`baseDate`**: **`Date`** `Required` - The date to compare with.
 - **`options`**: **`Object`** `Optional` - See [options](#options).
 
 #### Examples
 
 ```js
-getRelWeeks(new Date(), { locales: 'en' }); //=> in 0 weeks
-getRelWeeks(new Date(), { locales: 'ru', numeric: 'auto' }); //=> на этой неделе
+getRelWeeks(new Date(), new Date(), { locales: 'en' }); //=> in 0 weeks
+getRelWeeks(new Date(), new Date(), { locales: 'ru', numeric: 'auto' }); //=> на этой неделе
 ```
 
 ### `getRelDays`
 
-Formats the date according to [the locales and the formatting options](#options) and the 'days' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
+Formats the target date according to [the locales and the formatting options](#options) and the 'days' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the given base date.
 
 #### Syntax
 
 > ```js
-> getRelDays(date);
-> getRelDays(date, options);
+> getRelDays(targetDate, baseDate);
+> getRelDays(targetDate, baseDate, options);
 > ```
 
 #### Parameters
 
-- **`date`**: **`Date`** `Required` - The date to format.
+- **`targetDate`**: **`Date`** `Required` - The date to format.
+- **`baseDate`**: **`Date`** `Required` - The date to compare with.
 - **`options`**: **`Object`** `Optional` - See [options](#options).
 
 #### Examples
 
 ```js
-getRelDays(new Date(), { locales: 'en' }); //=> in 0 days
-getRelDays(new Date(), { locales: 'ru', numeric: 'auto' }); //=> сегодня
+getRelDays(new Date(), new Date(), { locales: 'en' }); //=> in 0 days
+getRelDays(new Date(), new Date(), { locales: 'ru', numeric: 'auto' }); //=> сегодня
 ```
 
 ### `getRelHours`
 
-Formats the date according to [the locales and the formatting options](#options) and the 'hours' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
+Formats the target date according to [the locales and the formatting options](#options) and the 'hours' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the given base date.
 
 #### Syntax
 
 > ```js
-> getRelHours(date);
-> getRelHours(date, options);
+> getRelHours(targetDate, baseDate);
+> getRelHours(targetDate, baseDate, options);
 > ```
 
 #### Parameters
 
-- **`date`**: **`Date`** `Required` - The date to format.
+- **`targetDate`**: **`Date`** `Required` - The date to format.
+- **`baseDate`**: **`Date`** `Required` - The date to compare with.
 - **`options`**: **`Object`** `Optional` - See [options](#options).
 
 #### Examples
 
 ```js
-getRelHours(new Date(), { locales: 'en' }); //=> in 0 hours
-getRelHours(new Date(), { locales: 'ru', numeric: 'auto' }); //=> в этот час
+getRelHours(new Date(), new Date(), { locales: 'en' }); //=> in 0 hours
+getRelHours(new Date(), new Date(), { locales: 'ru', numeric: 'auto' }); //=> в этот час
 ```
 
 ### `getRelMinutes`
 
-Formats the date according to [the locales and the formatting options](#options) and the 'minutes' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
+Formats the target date according to [the locales and the formatting options](#options) and the 'minutes' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the given base date.
 
 #### Syntax
 
 > ```js
-> getRelMinutes(date);
-> getRelMinutes(date, options);
+> getRelMinutes(targetDate, baseDate);
+> getRelMinutes(targetDate, baseDate, options);
 > ```
 
 #### Parameters
 
-- **`date`**: **`Date`** `Required` - The date to format.
+- **`targetDate`**: **`Date`** `Required` - The date to format.
+- **`baseDate`**: **`Date`** `Required` - The date to compare with.
 - **`options`**: **`Object`** `Optional` - See [options](#options).
 
 #### Examples
 
 ```js
-getRelMinutes(new Date(), { locales: 'en' }); //=> in 0 minutes
-getRelMinutes(new Date(), { locales: 'ru', numeric: 'auto' }); //=> в эту минуту
+getRelMinutes(new Date(), new Date(), { locales: 'en' }); //=> in 0 minutes
+getRelMinutes(new Date(), new Date(), { locales: 'ru', numeric: 'auto' }); //=> в эту минуту
 ```
 
 ### `getRelSeconds`
 
-Formats the date according to [the locales and the formatting options](#options) and the 'seconds' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the current date.
+Formats the target date according to [the locales and the formatting options](#options) and the 'seconds' [unit](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#parameters) in human-friendly words relative to the given base date.
 
 #### Syntax
 
 > ```js
-> getRelSeconds(date);
-> getRelSeconds(date, options);
+> getRelSeconds(targetDate, baseDate);
+> getRelSeconds(targetDate, baseDate, options);
 > ```
 
 #### Parameters
 
-- **`date`**: **`Date`** `Required` - The date to format.
+- **`targetDate`**: **`Date`** `Required` - The date to format.
+- **`baseDate`**: **`Date`** `Required` - The date to compare with.
 - **`options`**: **`Object`** `Optional` - See [options](#options).
 
 #### Examples
 
 ```js
-getRelSeconds(new Date(), { locales: 'en' }); //=> in 0 seconds
-getRelSeconds(new Date(), { locales: 'ru', numeric: 'auto' }); //=> сейчас
+getRelSeconds(new Date(), new Date(), { locales: 'en' }); //=> in 0 seconds
+getRelSeconds(new Date(), new Date(), { locales: 'ru', numeric: 'auto' }); //=> сейчас
 ```
 
 ### `getDiffInCalendarYears`

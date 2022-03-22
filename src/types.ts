@@ -4,7 +4,11 @@ export interface IGetRelOptions extends Intl.RelativeTimeFormatOptions {
     | Intl.UnicodeBCP47LocaleIdentifier[];
 }
 
-export type TGetRel = (date: Date, options?: IGetRelOptions) => string;
+export type TGetRel = (
+  targetDate: Date,
+  baseDate: Date,
+  options?: IGetRelOptions
+) => string;
 
 export type TGetDiff = (
   targetDate: Date,

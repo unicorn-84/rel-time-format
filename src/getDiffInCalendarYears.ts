@@ -1,3 +1,5 @@
+import type { TGetDiff } from './types.js';
+
 /**
  * Get the number of calendar years between the given dates.
  *
@@ -10,9 +12,9 @@
  * //=> 1
  */
 
-const getDiffInCalendarYears = (
-  targetDate: Date,
-  baseDate: Date,
+const getDiffInCalendarYears: TGetDiff = (
+  targetDate,
+  baseDate,
   abs = false
 ) => {
   const years = targetDate.getFullYear() - baseDate.getFullYear();

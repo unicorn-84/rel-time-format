@@ -1,3 +1,5 @@
+import type { TGetDiff } from './types.js';
+
 /**
  * Get the number of calendar minutes between the given dates. This means that seconds and milliseconds are removed from the dates.
  *
@@ -9,9 +11,9 @@
  * getDiffInCalendarMinutes(new Date('2021-01-01T23:59:59'), new Date('2021-01-02T00:00:59')) //=> -1
  */
 
-const getDiffInCalendarMinutes = (
-  targetDate: Date,
-  baseDate: Date,
+const getDiffInCalendarMinutes: TGetDiff = (
+  targetDate,
+  baseDate,
   abs = false
 ) => {
   const diff =

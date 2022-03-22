@@ -1,3 +1,5 @@
+import type { TGetDiff } from './types.js';
+
 /**
  * Get the number of calendar weeks between the given dates. The week starts on Monday.
  *
@@ -9,9 +11,9 @@
  * getDiffInCalendarWeeks(new Date('2022-01-31T23:59:59'), new Date('2022-03-01T00:00:00')) //=> -4
  */
 
-const getDiffInCalendarWeeks = (
-  targetDate: Date,
-  baseDate: Date,
+const getDiffInCalendarWeeks: TGetDiff = (
+  targetDate,
+  baseDate,
   abs = false
 ) => {
   // The number of days in the last week of the target date.

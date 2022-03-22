@@ -1,4 +1,5 @@
 import getDiffInCalendarYears from './getDiffInCalendarYears.js';
+import type { TGetDiff } from './types.js';
 
 /**
  * Get the number of calendar months between the given dates.
@@ -11,9 +12,9 @@ import getDiffInCalendarYears from './getDiffInCalendarYears.js';
  * getDiffInCalendarMonths(new Date('2021-01-01T23:59:59'), new Date('2022-01-01T23:59:59')) //=> -12
  */
 
-const getDiffInCalendarMonths = (
-  targetDate: Date,
-  baseDate: Date,
+const getDiffInCalendarMonths: TGetDiff = (
+  targetDate,
+  baseDate,
   abs = false
 ) => {
   const years = getDiffInCalendarYears(targetDate, baseDate, false);

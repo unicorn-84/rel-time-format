@@ -38,17 +38,24 @@ import {
 getRelTime(new Date(), new Date(), {
   locales: 'en',
   numeric: 'auto',
-}); //=> now
+});
+//=> now
+
 getRelTime(new Date(2023, 0, 1), new Date('2022-12-01'), {
   locales: 'ru',
   style: 'short',
-}); //=> через 1 мес.
-getRelYears(new Date('2000 Jan 1'), new Date('2022-01-01'), { locales: 'en' }); // 22 years ago
+});
+//=> через 1 мес.
+
+getRelYears(new Date('2000 Jan 1'), new Date('2022-01-01'), { locales: 'en' });
+//=> 22 years ago
+
 getDiffInCalendarDays(
   new Date('2022-01-01'),
   new Date('2022-01-02T23:59:59'),
   true
-); //=> 1
+);
+//=> 1
 ```
 
 ## API

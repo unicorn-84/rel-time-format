@@ -60,8 +60,24 @@ Formats the target date according to the [locales and formatting options](#optio
 #### Examples
 
 ```js
-getRelTime(new Date(), new Date(), { locales: 'en' }); //=> in 0 seconds
-getRelTime(new Date(), new Date(), { locales: 'ru', numeric: 'auto' }); //=> сейчас
+getRelTime(new Date(), new Date(), { locales: 'en' });
+//=> in 0 seconds
+
+getRelTime(new Date('2022-01-01T23:00:00'), new Date('2022-01-01T23:59:59'), {
+  locales: 'en',
+});
+//=> 59 minutes ago
+
+getRelTime(new Date('2022-11-01'), new Date('2022-01-01'), {
+  locales: 'en',
+});
+//=> in 10 months
+
+getRelTime(new Date('2022-01-01'), new Date('2022-01-02'), {
+  locales: 'ru',
+  numeric: 'auto',
+});
+//=> вчера
 ```
 
 ### `getRelYears`
@@ -84,8 +100,14 @@ Formats the target date according to [the locales and the formatting options](#o
 #### Examples
 
 ```js
-getRelYears(new Date(), new Date(), { locales: 'en' }); //=> in 0 years
-getRelYears(new Date(), new Date(), { locales: 'ru', numeric: 'auto' }); //=> в этом году
+getRelYears(new Date(), new Date(), { locales: 'en' });
+//=> in 0 years
+
+getRelYears(new Date('2022-01-01'), new Date('2000-01-01'), {
+  locales: 'ru',
+  numeric: 'auto',
+});
+//=> через 22 года
 ```
 
 ### `getRelQuarters`
@@ -108,8 +130,14 @@ Formats the target date according to [the locales and the formatting options](#o
 #### Examples
 
 ```js
-getRelQuarters(new Date(), new Date(), { locales: 'en' }); //=> in 0 quarters
-getRelQuarters(new Date(), new Date(), { locales: 'ru', numeric: 'auto' }); //=> в текущем квартале
+getRelQuarters(new Date(), new Date(), { locales: 'en' });
+//=> in 0 quarters
+
+getRelQuarters(new Date('2022-01-01'), new Date('2022-10-01'), {
+  locales: 'ru',
+  numeric: 'auto',
+});
+//=> 3 квартала назад
 ```
 
 ### `getRelMonths`
@@ -132,8 +160,14 @@ Formats the target date according to [the locales and the formatting options](#o
 #### Examples
 
 ```js
-getRelMonths(new Date(), new Date(), { locales: 'en' }); //=> in 0 months
-getRelMonths(new Date(), new Date(), { locales: 'ru', { numeric: 'auto' }); //=> в этом месяце
+getRelMonths(new Date(), new Date(), { locales: 'en' });
+//=> in 0 months
+
+getRelMonths(new Date('2023-12-01'), new Date('2022-01-01'), {
+  locales: 'ru',
+  numeric: 'auto',
+});
+//=> через 23 месяца
 ```
 
 ### `getRelWeeks`
@@ -160,8 +194,14 @@ The week starts on Monday.
 #### Examples
 
 ```js
-getRelWeeks(new Date(), new Date(), { locales: 'en' }); //=> in 0 weeks
-getRelWeeks(new Date(), new Date(), { locales: 'ru', numeric: 'auto' }); //=> на этой неделе
+getRelWeeks(new Date(), new Date(), { locales: 'en' });
+//=> in 0 weeks
+
+getRelWeeks(new Date('2022-01-31'), new Date('2022-01-01'), {
+  locales: 'ru',
+  numeric: 'auto',
+});
+//=> через 5 недель
 ```
 
 ### `getRelDays`
@@ -184,8 +224,14 @@ Formats the target date according to [the locales and the formatting options](#o
 #### Examples
 
 ```js
-getRelDays(new Date(), new Date(), { locales: 'en' }); //=> in 0 days
-getRelDays(new Date(), new Date(), { locales: 'ru', numeric: 'auto' }); //=> сегодня
+getRelDays(new Date(), new Date(), { locales: 'en' });
+//=> in 0 days
+
+getRelDays(new Date('2022-01-01'), new Date('2023-01-01'), {
+  locales: 'ru',
+  numeric: 'auto',
+});
+//=> 365 дней назад
 ```
 
 ### `getRelHours`
@@ -208,8 +254,14 @@ Formats the target date according to [the locales and the formatting options](#o
 #### Examples
 
 ```js
-getRelHours(new Date(), new Date(), { locales: 'en' }); //=> in 0 hours
-getRelHours(new Date(), new Date(), { locales: 'ru', numeric: 'auto' }); //=> в этот час
+getRelHours(new Date(), new Date(), { locales: 'en' });
+//=> in 0 hours
+
+getRelHours(new Date('2022-01-01T00:00:00'), new Date('2022-01-01T00:59:00'), {
+  locales: 'ru',
+  numeric: 'auto',
+});
+//=> в этот час
 ```
 
 ### `getRelMinutes`
@@ -232,8 +284,15 @@ Formats the target date according to [the locales and the formatting options](#o
 #### Examples
 
 ```js
-getRelMinutes(new Date(), new Date(), { locales: 'en' }); //=> in 0 minutes
-getRelMinutes(new Date(), new Date(), { locales: 'ru', numeric: 'auto' }); //=> в эту минуту
+getRelMinutes(new Date(), new Date(), { locales: 'en' });
+//=> in 0 minutes
+
+getRelMinutes(
+  new Date('2022-01-01T22:00:00'),
+  new Date('2022-01-01T21:15:00'),
+  { locales: 'ru', numeric: 'auto' }
+);
+//=> через 45 минут
 ```
 
 ### `getRelSeconds`
@@ -256,8 +315,15 @@ Formats the target date according to [the locales and the formatting options](#o
 #### Examples
 
 ```js
-getRelSeconds(new Date(), new Date(), { locales: 'en' }); //=> in 0 seconds
-getRelSeconds(new Date(), new Date(), { locales: 'ru', numeric: 'auto' }); //=> сейчас
+getRelSeconds(new Date(), new Date(), { locales: 'en' });
+//=> in 0 seconds
+
+getRelSeconds(
+  new Date('2022-01-01T00:00:15'),
+  new Date('2022-01-01T00:00:00.900'),
+  { locales: 'ru', numeric: 'auto' }
+);
+//=> через 15 секунд
 ```
 
 ### `getDiffInCalendarYears`

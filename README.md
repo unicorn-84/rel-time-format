@@ -29,11 +29,7 @@ yarn add rel-time-format
 - The **rel-time-format** library is written using [ECMAScript Internationalization API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl), which requires [Node.js](https://nodejs.org) version 14 or higher.
 
 ```js
-import {
-  getRelTime,
-  getRelYears,
-  getDiffInCalendarDays,
-} from 'rel-time-format';
+import { getRelTime } from 'rel-time-format';
 
 getRelTime(new Date(), new Date(), {
   locales: 'en',
@@ -46,9 +42,17 @@ getRelTime(new Date(2023, 0, 1), new Date('2022-12-01'), {
   style: 'short',
 });
 //=> через 1 мес.
+```
+
+```js
+import { getRelYears } from 'rel-time-format';
 
 getRelYears(new Date('2000 Jan 1'), new Date('2022-01-01'), { locales: 'en' });
 //=> 22 years ago
+```
+
+```js
+import { getDiffInCalendarDays } from 'rel-time-format';
 
 getDiffInCalendarDays(
   new Date('2022-01-01'),

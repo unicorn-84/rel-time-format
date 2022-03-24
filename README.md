@@ -1,6 +1,6 @@
 # 🕰️ rel-time-format
 
-JavaScript library for human-friendly relative date formatting.
+> JavaScript library for human-friendly relative date formatting.
 
 This is a simple wrapper for [Intl.RelativeTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat).
 

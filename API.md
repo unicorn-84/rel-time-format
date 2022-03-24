@@ -42,7 +42,7 @@ Table of contents
 
 ### `getRelTime`
 
-Formats the target date according to the [locales and formatting options](#options) in human-friendly words relative to the given base date.
+Formats the target date according to the [locales and the formatting options](#options) in human-friendly words relative to the given base date.
 
 #### Syntax
 
@@ -611,7 +611,7 @@ getDiffInMilliseconds(
 
 ### `options`
 
-An object with [the locales and the formatting options](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#parameters).
+An object with the locales and the formatting options. See [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#parameters).
 
 - **`locales`**: `string|string[]`
 - **`localeMatcher`**:

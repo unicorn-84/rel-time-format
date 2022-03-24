@@ -64,7 +64,7 @@ getDiffInCalendarDays(
 
 ## API
 
-See [API](https://github.com/unicorn-84/rel-time-format/blob/master/API.md).
+See [documentation](https://unicorn-84.github.io/rel-time-format/).
 
 ## Support
 

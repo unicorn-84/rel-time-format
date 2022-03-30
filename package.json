@@ -6,8 +6,6 @@
   "exports": {
     ".": "./lib/index.js"
   },
-  "typings": "./lib/index.d.js",
-  "main": "./lib/index.js",
   "files": [
     "lib",
     "README.md",
@@ -29,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/unicorn-84/rel-time-format/issues"
   },
-  "homepage": "https://github.com/unicorn-84/rel-time-format#readme",
+  "homepage": "https://unicorn-84.github.io/rel-time-format",
   "license": "MIT",
   "scripts": {
     "semantic-release": "semantic-release",

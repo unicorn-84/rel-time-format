@@ -6,6 +6,8 @@
   "exports": {
     ".": "./lib/index.js"
   },
+  "typings": "./lib/index.d.js",
+  "main": "./lib/index.js",
   "files": [
     "lib",
     "README.md",

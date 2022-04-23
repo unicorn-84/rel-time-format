@@ -62,9 +62,9 @@ getDiffInCalendarDays(
 //=> 1
 ```
 
-## API
+## Documentation
 
-See [documentation](https://unicorn-84.github.io/rel-time-format/).
+Check out [the documentation website](https://unicorn-84.github.io/rel-time-format/).
 
 ## Support
 
